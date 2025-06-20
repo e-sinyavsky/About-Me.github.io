@@ -1,0 +1,22 @@
+@use 'helpers' as *;
+
+:root {
+    --font-family-base: 'Matangi', sans-serif;
+
+    --main-background-color: #f3f3f3;
+    --text-color: #000000;
+    --color-accent: #fcc82b;
+    --color-light: #f3f3f3;
+    --color-black: black; 
+    --color-gray: #555;
+    --color-light-gray: #ccc;
+
+    --container-width: #{rem(1100)};
+    --container-padding-x: #{rem(16)};
+    --transition-duration: 0.2s;
+}
+
+[data-theme="dark"] {
+    --main-background-color: #121212;
+    --text-color: #ffffff;
+}

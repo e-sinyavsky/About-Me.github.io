@@ -1,0 +1,105 @@
+@use '../helpers' as *;
+
+.header {
+    &__logo {
+        img {
+            height: rem(50);
+            width: rem(50);
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-block: rem(50);
+        align-items: center;
+    }
+
+    &__menu {        
+        @include mobile {
+            display: none;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: row;
+            column-gap: rem(40);
+
+            @include mobile {
+                flex-direction: column;
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 50;
+                overflow-y: auto;
+                padding: rem(50) rem(40);
+                background-color: var(--main-background-color);
+                color: var(--text-color);
+                row-gap: rem(30);
+                text-align: center;
+                justify-content: center;
+                font-size: rem(38);
+            }
+        }
+    }
+
+    &__burger {
+        display: none;
+        position: relative;
+        z-index: 50;
+        align-items: center;
+        justify-content: flex-end;
+        width: rem(30);
+        height: rem(18);
+        cursor: pointer;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            height: rem(2);
+            width: 100%;
+            background-color: var(--color-accent);
+            transition: all 0.3s ease 0%;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        &.active {
+            span {
+                transform: scale(0);
+            }
+
+            &::before {
+                top: 50%;
+                transform: rotate(-45deg) translate(0, -50%);
+            };
+
+            &::after {
+                bottom: 50%;
+                transform: rotate(45deg) translate(0, 50%);
+            };
+        }
+
+        span {
+            height: 2px;
+            width: 80%;
+            transform: scale(1);
+            background-color: var(--color-accent);
+        }
+
+        @include mobile {
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Egor Sinyavsky | Fullstack Developer</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="scripts/theme-toggle.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <div class="header__logo">
+          <img src="./icons/logo.svg" alt="logo" class="logo" />
+        </div>
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a href="#about" class="header__menu-link">About</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#skills" class="header__menu-link">Skills</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#portfolio" class="header__menu-link">Portfolio</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#work-experience" class="header__menu-link"
+                >Work Experience</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="#contacts" class="header__menu-link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-toggle__thumb"></span>
+        </button>
+        <div class="header__burger">
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <main class="content">
+      <div class="content__sections">
+        <div class="hero section" id="about">
+          <div class="hero__inner container">
+            <div class="hero__body">
+              <span id="auto_typing_text"></span>
+              <button class="hero__button" id="hero__button" type="button">
+                Let`s check!
+              </button>
+            </div>
+            <div class="hero__photo">
+              <img src="./images/photo2.jpg" alt="my-photo" />
+            </div>
+          </div>
+        </div>
+        <div class="skills section" id="skills">
+          <div class="skills__inner container">
+            <h2 class="skills__title">
+              <span class="skills__title__main-accent">HARD</span> skills
+            </h2>
+            <div class="skills__column">
+              <div class="skills__column-item">
+                <h3 class="skills__sub-title">FRONTEND</h3>
+                <div class="skills__body">
+                  <ul class="skills__items">
+                    <li class="skills__item">
+                      <span class="skills__item-title">
+                        HTML (HTML5), JSX
+                      </span>
+                    </li>
+                    <li class="skills__item">
+                      <span class="skills__item-title">
+                        CSS (CSS3), SASS(SCSS), Bootstrap, Material UI
+                      </span>
+                    </li>
+                    <li class="skills__item">
+                      <span class="skills__item-title">
+                        JavaScript (ES6, OOP), TypeScript
+                      </span>
+                    </li>
+                    <li class="skills__item">
+                      <span class="skills__item-title">React</span>
+                    </li>
+                    <li class="skills__item">
+                      <span class="skills__item-title">
+                        Redux (Redux Toolkit)
+                      </span>
+                    </li>
+                    <li class="skills__item">
+                      <span class="skills__item-title">
+                        Formik, React Hook Form, Yup, Axios, React Router, React Query
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="skills__column-item">
+                <h3 class="skills__sub-title">BACKEND</h3>
+                <div class="skills__body">
+                  <ul class="skills__items">
+                    <li class="skills__item">
+                      <span class="skills__item-title">
+                        Python, Django, Flask
+                      </span>
+                    </li>
+                    <li class="skills__item">
+                      <span class="skills__item-title">
+                        Ruby, Ruby on Rails
+                      </span>
+                    </li>
+                    <li class="skills__item">
+                      <span class="skills__item-title">
+                        PostgreSql, MySql, Mongo Db
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="skills__column-item">
+                <h3 class="skills__sub-title">OTHER</h3>
+                <div class="skills__body">
+                  <ul class="skills__items">
+                    <li class="skills__item">
+                      <span class="skills__item-title">
+                        Docker, Docker-compose
+                      </span>
+                    </li>
+                    <li class="skills__item">
+                      <span class="skills__item-title">
+                        REST, SOLID, DRY, KISS
+                      </span>
+                    </li>
+                    <li class="skills__item">
+                      <span class="skills__item-title">
+                        English level - A2
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <h2 class="skills__title">
+              <span class="skills__title__main-accent">
+                SOFT</span> skills</h2>
+            <div class="skills__column">
+              <div class="skills__body">
+                <ul class="skills__items">
+                  <li class="skills__item">
+                    <span class="skills__item-title">
+                      I know how to work in a team, I have experience in communication with designers, managers and other developers
+                    </span>
+                  </li>
+                  <li class="skills__item">
+                    <span class="skills__item-title">I am responsible about deadlines</span></li>
+                  <li class="skills__item"><span class="skills__item-title">I am attentive to the details of the terms of reference</span></li>
+                  <li class="skills__item"><span class="skills__item-title">I am demanding of the quality of my code, I follow the code-style</span></li>
+                </ul>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#auto_typing_text", {
+        strings: [
+          '<span style="color: var(--color-accent); font-weight: 600;">Hello!</span> My name is Sinyavsky Egor.\n^500\n<span class="highlight">Let me show you my capabilities...</span> ^1000\n<span class="highlight">I can do some great things for you.</span>',
+        ],
+        typeSpeed: 40,
+        backSpeed: 20,
+        loop: false,
+        showCursor: false,
+        onComplete: function (self) {
+          const cursor = document.querySelector(".typed-cursor");
+          if (cursor) cursor.style.display = "none";
+          document.getElementById("hero__button").classList.add("is-show");
+        },
+      });
+    </script>
+    <script>
+      document
+        .querySelector(".header__burger")
+        .addEventListener("click", function () {
+          this.classList.toggle("active");
+          document.querySelector(".header__menu").classList.toggle("open");
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,648 @@
+@charset "UTF-8";
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+:where(p:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями и видео
+ */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+  /**
+    Убираем скачок интерфейса по горизонтали
+    при появлении / исчезновении скроллбара
+   */
+  scrollbar-gutter: stable;
+}
+
+/**
+  Плавный скролл
+ */
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Нормализация высоты элемента ссылки при его инспектировании в DevTools
+ */
+a:where([class]) {
+  display: inline-flex;
+}
+
+/**
+  Курсор-рука при наведении на элемент
+ */
+button,
+label {
+  cursor: pointer;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+  (за исключением тех, у которых уже указан
+  атрибут fill со значением 'none' или начинается с 'url')
+ */
+:where([fill]:not([fill=none],
+[fill^=url])) {
+  fill: currentColor;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+  (за исключением тех, у которых уже указан
+  атрибут stroke со значением 'none')
+ */
+:where([stroke]:not([stroke=none],
+[stroke^=url])) {
+  stroke: currentColor;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Приведение рамок таблиц в классический 'collapse' вид
+ */
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Matangi";
+  src: url("../fonts/Matangi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Matangi";
+  src: url("../fonts/Matangi-ExtraBold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Matangi";
+  src: url("../fonts/Matangi-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Matangi";
+  src: url("../fonts/Matangi-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Matangi";
+  src: url("../fonts/Matangi-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Matangi";
+  src: url("../fonts/Matangi-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Matangi";
+  src: url("../fonts/Matangi-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --font-family-base: "Matangi", sans-serif;
+  --main-background-color: #f3f3f3;
+  --text-color: #000000;
+  --color-accent: #fcc82b;
+  --color-light: #f3f3f3;
+  --color-black: black;
+  --color-gray: #555;
+  --color-light-gray: #ccc;
+  --container-width: 68.75rem;
+  --container-padding-x: 1rem;
+  --transition-duration: 0.2s;
+}
+
+[data-theme=dark] {
+  --main-background-color: #121212;
+  --text-color: #ffffff;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--container-pading-x);
+}
+
+body {
+  background-color: var(--main-background-color);
+  font-family: var(--font-family-base);
+  transition: background-color var(--transition-duration), color var(--transition-duration);
+  color: var(--text-color);
+}
+@media (width <= 90.06125rem) {
+  body {
+    padding: 0 2.5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.open {
+  display: flex !important;
+}
+
+.is-show {
+  display: block !important;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+}
+@media (any-hover: hover) {
+  a:hover {
+    color: var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  a:active {
+    color: var(--color-accent);
+  }
+}
+a[class] {
+  text-decoration: none;
+}
+
+.header__logo img {
+  height: 3.125rem;
+  width: 3.125rem;
+}
+.header__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-block: 3.125rem;
+  align-items: center;
+}
+@media (width <= 47.99875rem) {
+  .header__menu {
+    display: none;
+  }
+}
+.header__menu-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2.5rem;
+}
+@media (width <= 47.99875rem) {
+  .header__menu-list {
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 3.125rem 2.5rem;
+    background-color: var(--main-background-color);
+    color: var(--text-color);
+    row-gap: 1.875rem;
+    text-align: center;
+    justify-content: center;
+    font-size: 2.375rem;
+  }
+}
+.header__burger {
+  display: none;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 1.875rem;
+  height: 1.125rem;
+  cursor: pointer;
+}
+.header__burger::before, .header__burger::after {
+  content: "";
+  position: absolute;
+  height: 0.125rem;
+  width: 100%;
+  background-color: var(--color-accent);
+  transition: all 0.3s ease 0%;
+}
+.header__burger::before {
+  top: 0;
+}
+.header__burger::after {
+  bottom: 0;
+}
+.header__burger.active span {
+  transform: scale(0);
+}
+.header__burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+.header__burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+.header__burger span {
+  height: 2px;
+  width: 80%;
+  transform: scale(1);
+  background-color: var(--color-accent);
+}
+@media (width <= 47.99875rem) {
+  .header__burger {
+    display: flex;
+  }
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 5.5625rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  background-color: var(--color-light-gray);
+  cursor: pointer;
+  border: none;
+  padding: 0.35rem;
+  overflow: hidden;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.theme-toggle__thumb {
+  position: absolute;
+  top: 50%;
+  left: 0.35rem;
+  transform: translate(0, -50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.theme-toggle::before {
+  content: "☀️";
+  left: 0.75rem;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  font-size: 1.25rem;
+}
+.theme-toggle::after {
+  content: "🌙";
+  right: 0.75rem;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  font-size: 1.25rem;
+}
+.theme-toggle[data-theme=dark] {
+  background-color: var(--color-gray);
+}
+.theme-toggle[data-theme=dark] .theme-toggle__thumb {
+  transform: translate(3rem, -50%);
+  background-color: var(--color-accent);
+  box-shadow: 20px 20px 20px rgba(248, 248, 248, 0.2);
+}
+
+.content__sections .section {
+  padding-block: 10rem;
+}
+@media (width <= 90.06125rem) {
+  .content__sections .section {
+    padding-block: 5rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .content__sections .section {
+    padding-block: 2.5rem;
+  }
+}
+.content__sections .hero__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.875rem;
+}
+.content__sections .hero__body {
+  flex: 1 1 50%;
+  max-width: 50%;
+  min-width: 18.75rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.1875rem;
+}
+.content__sections .hero__body #auto_typing_text {
+  font-size: 34px;
+}
+.content__sections .hero__button {
+  display: none;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid var(--color-accent);
+  background-color: transparent;
+  height: 3.75rem;
+  width: 15.625rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.content__sections .hero__button:hover {
+  background-color: var(--color-accent);
+  border: 0.0625rem solid var(--color-black);
+  font-weight: bold;
+}
+[data-theme=dark] .content__sections .hero__button {
+  color: var(--color-light);
+}
+[data-theme=dark] .content__sections .hero__button:hover {
+  background-color: var(--color-accent);
+  border: 0.0625rem solid var(--color-black);
+  font-weight: bold;
+  color: var(--color-black);
+}
+.content__sections .hero__photo {
+  flex: 0 0 20rem;
+  height: 20rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 0.0625rem solid var(--color-black);
+  box-shadow: 0rem 0rem 3.75rem 1.875rem var(--color-black);
+}
+[data-theme=dark] .content__sections .hero__photo {
+  box-shadow: 0rem 0rem 3.75rem 1.875rem var(--color-accent);
+  border: 0.0625rem solid var(--color-accent);
+}
+.content__sections .hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.content__sections .hero__photo:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+.content__sections .hero__photo::after {
+  content: "";
+  position: absolute;
+  bottom: -rem(100);
+  left: 0;
+  width: 100%;
+  height: 6.25rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+  transform: scaleY(-1);
+}
+@media (width <= 90.06125rem) {
+  .content__sections .hero__photo {
+    flex: 0 0 18.75rem;
+    height: 18.75rem;
+    box-shadow: 0rem 0rem 2.5rem 0.625rem var(--color-black);
+  }
+  [data-theme=dark] .content__sections .hero__photo {
+    box-shadow: 0rem 0rem 2.5rem 1.25rem var(--color-accent);
+    border: 0.0625rem solid var(--color-accent);
+  }
+}
+@media (width <= 47.99875rem) {
+  .content__sections .hero__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+  }
+  .content__sections .hero__photo {
+    order: -1;
+    flex: 0 0 18.75rem;
+    height: 31.25rem;
+    width: 18.75rem;
+  }
+  .content__sections .hero__body {
+    max-width: 100%;
+  }
+  .content__sections .hero__body #auto_typing_text {
+    font-size: 1.75rem;
+  }
+}
+.content__sections .skills {
+  transition: all 0.4s;
+}
+.content__sections .skills__title {
+  font-size: 28px;
+  width: fit-content;
+}
+.content__sections .skills__title__main-accent {
+  color: var(--color-accent);
+  border-bottom: 0.0625rem solid var(--color-black);
+  border-bottom-width: thick;
+  border-radius: 0.625rem;
+}
+.content__sections .skills__sub-title {
+  text-align: end;
+}
+.content__sections .skills__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.875rem;
+}
+.content__sections .skills__column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.125rem;
+}
+.content__sections .skills__body {
+  padding-block: 1.25rem;
+  border-right: 0.0625rem solid var(--color-accent);
+  border-bottom: 0.0625rem solid var(--color-accent);
+  border-bottom-width: thick;
+  border-radius: 20px;
+}
+.content__sections .skills__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
+  justify-content: flex-start;
+  padding: 0 0.625rem;
+}
+@media (width <= 90.06125rem) {
+  .content__sections .skills__items {
+    justify-content: center;
+  }
+}
+@media (width <= 47.99875rem) {
+  .content__sections .skills__items {
+    flex-direction: column;
+  }
+}
+.content__sections .skills__item {
+  padding-block: 0.625rem;
+  border: 0.0625rem solid var(--color-accent);
+  padding: 0.625rem;
+  border-radius: 5rem;
+  background-color: transparent;
+}
+.content__sections .skills__item-title {
+  font-size: 1.125rem;
+  padding: 0 1.25rem;
+}
+
+/*# sourceMappingURL=main.css.map */

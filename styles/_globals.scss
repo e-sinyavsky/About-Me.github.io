@@ -1,0 +1,46 @@
+@use 'helpers' as *;
+
+body {
+    background-color: var(--main-background-color);
+    font-family: var(--font-family-base);
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+    color: var(--text-color);
+
+    @include laptop {
+        padding: 0 rem(40);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.open {
+    display: flex !important;
+}
+
+.is-show {
+    display: block !important;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    color: inherit;
+
+    @include hover {
+        color: var(--color-accent);
+    }
+
+    &[class] {
+        text-decoration: none;
+    }
+}
