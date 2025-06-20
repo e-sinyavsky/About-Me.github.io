@@ -1,10 +1,36 @@
 @use '../helpers' as *;
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--main-background-color);
+    transition: all 0.2s ease;
+
     &__logo {
-        img {
-            height: rem(50);
-            width: rem(50);
+        transition: transform 0.2s ease;
+        cursor: pointer;
+
+        svg {
+            fill: var(--color-black); /* Дефолтный цвет (синий) */
+            transition: fill 0.2s ease, transform 0.2s ease;
+            height: rem(60);
+            width: rem(60);
+
+            [data-theme="dark"] & {
+                fill: var(--color-light);
+            }
+        }
+
+        &:hover {
+            svg {
+                fill: var(--color-accent);
+                transform: scale(1.05);
+
+                [data-theme="dark"] & {
+                    fill: var(--color-accent);
+                }
+            }
         }
     }
 
@@ -12,8 +38,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding-block: rem(50);
         align-items: center;
+
+        @include laptop {
+            padding: 0 rem(40);
+        }
     }
 
     &__menu {        
@@ -102,4 +131,10 @@
             display: flex;
         }
     }
+}
+
+
+.header.scrolled {
+    background-color: var(--main-background-color);
+    box-shadow: 0px 1px 10px var(--color-black);
 }
