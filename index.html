@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="./styles/main.css" />
     <script src="scripts/theme-toggle.js"></script>
     <script type="module" src="./scripts/i18n.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -883,28 +881,6 @@
         const sections = document.querySelectorAll(".section");
         sections.forEach((section) => {
           observer.observe(section);
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const cards = gsap.utils.toArray(".work-experience-card");
-        cards.forEach((card, i) => {
-          gsap.from(card, {
-            y: 100,
-            rotationX: 15,
-            rotationY: i % 2 === 0 ? -10 : 10,
-            opacity: 0,
-            duration: 1,
-            ease: "back.out(1.0)",
-            scrollTrigger: {
-              trigger: card,
-              start: "top 80%",
-              toggleActions: "play none none none",
-            },
-          });
         });
       });
     </script>

@@ -70,7 +70,6 @@
     color: var(--text-color);
     text-align: left;
     cursor: pointer;
-    transition: background var(--transition-duration) ease;
 
     &:hover {
       background: rgba(252, 200, 43, 0.1);

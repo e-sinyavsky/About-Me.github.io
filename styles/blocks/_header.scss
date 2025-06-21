@@ -8,6 +8,10 @@
   transition: all 0.2s ease;
   height: rem(80);
 
+  &.scrolled {
+    box-shadow: 0px 1px 10px var(--color-black);
+  }
+
   &__settings {
     display: flex;
     gap: 20px;
@@ -141,9 +145,4 @@
       display: flex;
     }
   }
-}
-
-.header.scrolled {
-  background-color: var(--main-background-color);
-  box-shadow: 0px 1px 10px var(--color-black);
 }

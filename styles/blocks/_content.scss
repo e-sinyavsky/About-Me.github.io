@@ -4,6 +4,7 @@
   &__sections {
     .section {
       border-bottom: 1px solid white;
+      border-radius: rem(50);
       padding-block: rem(160);
 
       @include laptop {
@@ -44,7 +45,7 @@
 
       &__button {
         display: none;
-        border-radius: rem(100);
+        border-radius: rem(50);
         border: rem(1) solid var(--color-accent);
         background-color: transparent;
         height: rem(60);
@@ -158,6 +159,10 @@
         font-size: 28px;
         width: fit-content;
 
+        &:nth-of-type(2) {
+          margin-top: rem(28.08);
+        }
+
         &__main-accent {
           color: var(--color-accent);
           border-bottom: rem(1) solid var(--color-black);
@@ -189,9 +194,6 @@
         display: flex;
         flex-direction: column;
         row-gap: rem(50);
-
-        &-item {
-        }
       }
 
       &__body {
@@ -199,7 +201,7 @@
         border-right: rem(1) solid var(--color-accent);
         border-bottom: rem(1) solid var(--color-accent);
         border-bottom-width: thick;
-        border-radius: 20px;
+        border-radius: rem(50);
       }
 
       &__items {
@@ -268,12 +270,38 @@
     }
 
     .work-experience-card {
-      border-radius: 12px;
+      border-radius: rem(12);
       padding: 2.5rem;
       margin-bottom: 2rem;
       transition: all 0.3s ease;
       border-top: rem(15) solid var(--color-black);
-      box-shadow: 0 10px 30px var(--color-black);
+      box-shadow: 0 rem(10) rem(30) var(--color-black);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px var(--color-black);
+
+        &::before {
+          transform: scaleX(1);
+        }
+
+        .work-experience-card__link {
+          color: var(--color-accent);
+        }
+
+        .work-experience-card__project a {
+          color: var(--color-accent);
+        }
+      }
+
+      [data-theme="dark"] & {
+        &:hover {
+          box-shadow: 0 15px 35px rgba(252, 200, 43, 0.1);
+        }
+      }
 
       [data-theme="dark"] & {
         border-top: rem(15) solid var(--color-accent);
@@ -285,7 +313,7 @@
         color: var(--color-text-secondary);
         margin-bottom: 0.5rem;
         background: var(--color-bg-tertiary);
-        border-radius: 20px;
+        border-radius: rem(20);
       }
 
       &__title {
