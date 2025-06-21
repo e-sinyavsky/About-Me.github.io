@@ -8,12 +8,19 @@
   transition: all 0.2s ease;
   height: rem(80);
 
+  &__settings {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__logo {
     transition: transform 0.2s ease;
     cursor: pointer;
 
     svg {
-      fill: var(--color-black); /* Дефолтный цвет (синий) */
+      fill: var(--color-black);
       transition: fill 0.2s ease, transform 0.2s ease;
       height: rem(60);
       width: rem(60);

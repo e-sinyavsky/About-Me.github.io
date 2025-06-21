@@ -7,6 +7,7 @@
     <title>Egor Sinyavsky | Fullstack Developer</title>
     <link rel="stylesheet" href="./styles/main.css" />
     <script src="scripts/theme-toggle.js"></script>
+    <script type="module" src="./scripts/i18n.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   </head>
@@ -30,27 +31,82 @@
         <nav class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a href="#about" class="header__menu-link">About</a>
+              <a href="#about" class="header__menu-link" i18n="header.nav.about"
+                >About</a
+              >
             </li>
             <li class="header__menu-item">
-              <a href="#skills" class="header__menu-link">Skills</a>
+              <a
+                href="#skills"
+                class="header__menu-link"
+                i18n="header.nav.skills"
+                >Skills</a
+              >
             </li>
             <!-- <li class="header__menu-item">
               <a href="#portfolio" class="header__menu-link"><i>Portfolio</i></a>
             </li> -->
             <li class="header__menu-item">
-              <a href="#work-experience" class="header__menu-link"
+              <a
+                href="#work-experience"
+                class="header__menu-link"
+                i18n="header.nav.experience"
                 >Work Experience</a
               >
             </li>
             <li class="header__menu-item">
-              <a href="#contacts" class="header__menu-link">Contacts</a>
+              <a
+                href="#contacts"
+                class="header__menu-link"
+                i18n="header.nav.contacts"
+                >Contacts</a
+              >
             </li>
           </ul>
         </nav>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <span class="theme-toggle__thumb"></span>
-        </button>
+        <div class="header__settings">
+          <div class="header__settings__language-switcher">
+            <div class="language-selector">
+              <button
+                class="language-selector__toggle"
+                aria-expanded="false"
+                aria-label="Select language"
+              >
+                <span class="language-selector__current">EN</span>
+                <svg
+                  class="language-selector__icon"
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                >
+                  <path
+                    d="M1 1L6 7L11 1"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+              <div class="language-selector__dropdown">
+                <button class="language-selector__option active" data-lang="en">
+                  English
+                </button>
+                <button class="language-selector__option" data-lang="ru">
+                  Русский
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="settings__theme-switcher">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle theme"
+            >
+              <span class="theme-toggle__thumb"></span>
+            </button>
+          </div>
+        </div>
         <div class="header__burger">
           <span></span>
         </div>
@@ -67,6 +123,7 @@
                 id="hero__button"
                 type="button"
                 href="#contacts"
+                i18n="hero.button"
               >
                 Let's check!
               </button>
@@ -82,12 +139,14 @@
 
         <div class="skills section" data-aos="fade-right" id="skills">
           <div class="skills__inner container">
-            <h2 class="skills__title">
+            <h2 class="skills__title" i18n="skills.hard">
               <span class="skills__title__main-accent">HARD</span> skills
             </h2>
             <div class="skills__column">
               <div class="skills__column-item">
-                <h3 class="skills__sub-title">FRONTEND</h3>
+                <h3 class="skills__sub-title" i18n="skills.frontend">
+                  FRONTEND
+                </h3>
                 <div class="skills__body">
                   <ul class="skills__items">
                     <li class="skills__item">
@@ -123,7 +182,7 @@
                 </div>
               </div>
               <div class="skills__column-item">
-                <h3 class="skills__sub-title">BACKEND</h3>
+                <h3 class="skills__sub-title" i18n="skills.backend">BACKEND</h3>
                 <div class="skills__body">
                   <ul class="skills__items">
                     <li class="skills__item">
@@ -145,7 +204,7 @@
                 </div>
               </div>
               <div class="skills__column-item">
-                <h3 class="skills__sub-title">OTHER</h3>
+                <h3 class="skills__sub-title" i18n="skills.other">OTHER</h3>
                 <div class="skills__body">
                   <ul class="skills__items">
                     <li class="skills__item">
@@ -159,7 +218,7 @@
                       </span>
                     </li>
                     <li class="skills__item">
-                      <span class="skills__item-title">
+                      <span class="skills__item-title" i18n="skills.english">
                         English level - A2
                       </span>
                     </li>
@@ -168,32 +227,35 @@
               </div>
             </div>
 
-            <h2 class="skills__title">
+            <h2 class="skills__title" i18n="skills.soft">
               <span class="skills__title__main-accent">SOFT</span> skills
             </h2>
             <div class="skills__column">
               <div class="skills__body">
                 <ul class="skills__items">
                   <li class="skills__item">
-                    <span class="skills__item-title">
+                    <span
+                      class="skills__item-title"
+                      i18n="skills.soft_skills.a"
+                    >
                       I know how to work in a team, I have experience in
                       communication with designers, managers and other
                       developers
                     </span>
                   </li>
                   <li class="skills__item">
-                    <span class="skills__item-title"
+                    <span class="skills__item-title" i18n="skills.soft_skills.b"
                       >I am responsible about deadlines</span
                     >
                   </li>
                   <li class="skills__item">
-                    <span class="skills__item-title"
+                    <span class="skills__item-title" i18n="skills.soft_skills.c"
                       >I am attentive to the details of the terms of
                       reference</span
                     >
                   </li>
                   <li class="skills__item">
-                    <span class="skills__item-title"
+                    <span class="skills__item-title" i18n="skills.soft_skills.d"
                       >I am demanding of the quality of my code, I follow the
                       code-style</span
                     >
@@ -210,7 +272,7 @@
           id="work-experience"
         >
           <div class="work-experience__inner container">
-            <h3 class="work-experience-title">
+            <h3 class="work-experience-title" i18n="experience.title">
               Work <span class="text-accent">Experience</span>
             </h3>
 
@@ -231,21 +293,29 @@
               <div class="work-experience-card__position">
                 Fullstack Developer
               </div>
+              <div class="work-experience-card__project">
+                Project -
+                <a href="https://streamline.auto/" target="_blank"
+                  >Streamline Auto Solutions</a
+                >
+              </div>
               <div class="work-experience-card__description">
                 <ul>
-                  <li>
+                  <li i18n="work_experience.descriptions.streamline.a">
                     Developed and maintained full-stack applications with Django
                     backend and React + TypeScript frontend
                   </li>
-                  <li>
+                  <li i18n="work_experience.descriptions.streamline.b">
                     Optimized deployment workflows using Docker and CI/CD
                     pipelines
                   </li>
-                  <li>
+                  <li i18n="work_experience.descriptions.streamline.c">
                     Implemented Redux for state management to enhance
                     performance
                   </li>
-                  <li>Resolved complex bugs and improved UI/UX</li>
+                  <li i18n="work_experience.descriptions.streamline.d">
+                    Resolved complex bugs and improved UI/UX
+                  </li>
                 </ul>
               </div>
               <div class="stack">
@@ -370,14 +440,24 @@
               <div class="work-experience-card__position">
                 Fullstack Developer
               </div>
+              <div class="work-experience-card__project">
+                Project -
+                <a href="#">Vibrant</a>
+              </div>
               <div class="work-experience-card__description">
                 <ul>
-                  <li>Built RESTful APIs using Python (Flask)</li>
-                  <li>Integrated backend with Angular-based frontends</li>
-                  <li>
+                  <li i18n="work_experience.descriptions.vibrant.a">
+                    Built RESTful APIs using Python (Flask)
+                  </li>
+                  <li i18n="work_experience.descriptions.vibrant.b">
+                    Integrated backend with Angular-based frontends
+                  </li>
+                  <li i18n="work_experience.descriptions.vibrant.c">
                     Collaborated on feature development and code maintenance
                   </li>
-                  <li>Debugged and fixed critical issues across the stack</li>
+                  <li i18n="work_experience.descriptions.vibrant.d">
+                    Debugged and fixed critical issues across the stack
+                  </li>
                 </ul>
               </div>
               <div class="stack">
@@ -491,14 +571,22 @@
               <div class="work-experience-card__position">
                 Fullstack Developer
               </div>
+              <div class="work-experience-card__project">
+                Project -
+                <a href="https://www.justicebid.com/">JusticeBid</a>
+              </div>
               <div class="work-experience-card__description">
                 <ul>
-                  <li>Developed dynamic frontend components using React</li>
-                  <li>Integrated frontend with Ruby on Rails backends</li>
-                  <li>
+                  <li i18n="work_experience.descriptions.justicebid.a">
+                    Developed dynamic frontend components using React
+                  </li>
+                  <li i18n="work_experience.descriptions.justicebid.b">
+                    Integrated frontend with Ruby on Rails backends
+                  </li>
+                  <li i18n="work_experience.descriptions.justicebid.c">
                     Implemented new UI features to enhance user interaction
                   </li>
-                  <li>
+                  <li i18n="work_experience.descriptions.justicebid.d">
                     Participated in bug-fixing and performance optimization
                   </li>
                 </ul>
@@ -593,11 +681,11 @@
     <footer class="footer">
       <div class="footer__init container" id="contacts">
         <div class="footer__body">
-          <div class="footer__body-title">
+          <div class="footer__body-title" i18n="footer.title">
             Do you want to ask
             <span class="text-accent"><br />something interesting?</span>
           </div>
-          <div class="footer__body-sub-title">
+          <div class="footer__body-sub-title" i18n="footer.subtitle">
             Contact me. I am in touch Mon-Fri from 8 am to 8 pm (GMT).
           </div>
         </div>
