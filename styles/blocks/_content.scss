@@ -272,11 +272,11 @@
       padding: 2.5rem;
       margin-bottom: 2rem;
       transition: all 0.3s ease;
-      border-left: 4px solid var(--color-black);
+      border-top: rem(15) solid var(--color-black);
       box-shadow: 0 10px 30px var(--color-black);
 
       [data-theme="dark"] & {
-        border-left: 4px solid var(--color-accent);
+        border-top: rem(15) solid var(--color-accent);
       }
 
       &__date {
