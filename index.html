@@ -3,16 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/icons/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="/icons/logo.svg" type="image/svg+xml" />
     <title>Egor Sinyavsky | Fullstack Developer</title>
     <link rel="stylesheet" href="./styles/main.css" />
     <script src="scripts/theme-toggle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="header__inner container">
         <div class="header__logo">
-          <svg class="logo" xmlns="http://www.w3.org/2000/svg"  href='/' viewBox="0 0 100 100" width="100px" height="100px"><path d="M 65.568359 10.353516 C 64.491903 10.370677 63.422969 10.405376 62.394531 10.447266 C 58.280779 10.614863 54.892578 10.949219 54.892578 10.949219 A 2.0002 2.0002 0 0 0 54.289062 11.107422 L 39.777344 17.457031 A 2.0002 2.0002 0 0 0 39.263672 17.785156 L 24.744141 30.484375 A 2.0002 2.0002 0 0 0 24.3125 31.017578 L 15.232422 47.359375 A 2.0002 2.0002 0 0 0 14.980469 48.330078 L 14.980469 68.287109 C 14.980444 68.290209 14.950179 72.043381 17.046875 75.775391 C 19.144438 79.508938 23.692208 83.216206 31.558594 82.988281 C 32.383132 82.964391 33.474264 82.915894 34.419922 82.880859 A 2.0002 2.0002 0 0 0 35.501953 82.955078 C 35.501953 82.955078 35.920876 82.8515 36.0625 82.820312 C 52.351915 82.160436 81.539062 80.263672 81.539062 80.263672 A 2.0002 2.0002 0 0 0 83.404297 78.408203 L 87.023438 26.716797 C 87.023438 26.716797 87.297539 23.536224 85.863281 20.011719 C 84.429023 16.487213 81.075286 12.484199 74.599609 10.990234 L 74.599609 10.992188 C 72.932481 10.607465 70.909596 10.428097 68.789062 10.367188 C 67.728797 10.336733 66.644816 10.336354 65.568359 10.353516 z M 65.644531 14.367188 C 66.689676 14.358252 67.733782 14.367017 68.728516 14.398438 C 69.682114 14.428558 70.580211 14.483719 71.398438 14.558594 L 64.214844 18.150391 L 58.417969 14.677734 C 59.571464 14.59531 60.950683 14.508788 62.556641 14.443359 C 63.553203 14.402759 64.599386 14.376123 65.644531 14.367188 z M 55.193359 15.076172 L 62.978516 19.742188 L 57.847656 35.970703 L 38.289062 53.757812 L 22.164062 57.150391 L 19.078125 48.671875 L 27.638672 33.265625 L 41.664062 20.998047 L 55.193359 15.076172 z M 74.693359 15.146484 C 75.6684 15.429399 76.517259 15.771724 77.265625 16.15625 L 74.603516 17.484375 A 1.0005541 1.0005541 0 1 0 75.496094 19.275391 L 79.193359 17.429688 C 79.728052 17.869527 80.189345 18.331969 80.578125 18.814453 L 79.273438 19.251953 A 1.0001 1.0001 0 1 0 79.908203 21.148438 L 81.710938 20.544922 C 81.878401 20.871009 82.026676 21.19632 82.158203 21.519531 C 83.216445 24.120026 83.037109 26.382813 83.037109 26.382812 A 2.0002 2.0002 0 0 0 83.035156 26.410156 L 82.623047 32.291016 L 68.677734 21.509766 A 1.0001 1.0001 0 0 0 68.056641 21.029297 L 66.041016 19.472656 L 74.693359 15.146484 z M 64.691406 20.957031 L 66.603516 22.435547 L 65.03125 27.142578 A 1.0001 1.0001 0 1 0 66.927734 27.777344 L 68.279297 23.730469 L 69.503906 24.679688 L 68.640625 28.115234 A 1.0001 1.0001 0 1 0 70.580078 28.603516 L 71.230469 26.013672 L 81.550781 33.990234 L 73.849609 34.814453 A 1.0001 1.0001 0 0 0 72.476562 34.962891 L 59.837891 36.314453 L 64.691406 20.957031 z M 47.056641 27.466797 C 46.940391 27.450391 46.819219 27.457734 46.699219 27.490234 C 46.209219 27.620234 45.920781 28.109609 46.050781 28.599609 C 46.180781 29.079609 46.670156 29.370234 47.160156 29.240234 C 47.640156 29.110234 47.930781 28.620859 47.800781 28.130859 C 47.710781 27.770859 47.405391 27.516016 47.056641 27.466797 z M 47.960938 34.728516 C 47.844062 34.712109 47.722109 34.7175 47.599609 34.75 C 47.119609 34.87 46.830937 35.369375 46.960938 35.859375 C 47.080938 36.339375 47.580312 36.63 48.070312 36.5 C 48.550312 36.37 48.840938 35.880625 48.710938 35.390625 C 48.613438 35.030625 48.311562 34.777734 47.960938 34.728516 z M 81.435547 36.015625 C 77.221448 46.192003 71.833731 54.031129 66.214844 60.029297 L 60.007812 38.306641 L 64.980469 37.775391 L 64.980469 39.25 A 1.0001 1.0001 0 1 0 66.980469 39.25 L 66.980469 37.560547 L 67.699219 37.484375 L 67.699219 40.160156 A 1.0001 1.0001 0 1 0 69.699219 40.160156 L 69.699219 37.269531 L 72.240234 36.998047 L 72.240234 41.070312 A 1.0001 1.0001 0 1 0 74.240234 41.070312 L 74.240234 36.785156 L 75.869141 36.609375 L 75.869141 38.349609 A 1.0001 1.0001 0 1 0 77.869141 38.349609 L 77.869141 36.396484 L 81.435547 36.015625 z M 57.994141 38.541016 L 64.515625 61.359375 L 48.277344 56.490234 A 1.0001 1.0001 0 0 0 47.964844 56.396484 L 45.798828 55.746094 A 1.0001 1.0001 0 0 0 44.951172 55.492188 L 40.742188 54.230469 L 57.994141 38.541016 z M 29.818359 41.078125 C 29.701953 41.061719 29.580938 41.067109 29.460938 41.099609 C 28.970937 41.229609 28.680547 41.720937 28.810547 42.210938 C 28.940547 42.690938 29.429922 42.979609 29.919922 42.849609 C 30.399922 42.719609 30.690313 42.230234 30.570312 41.740234 C 30.472812 41.380234 30.167578 41.127344 29.818359 41.078125 z M 81.748047 44.792969 L 79.638672 74.927734 L 68.59375 63.195312 C 73.293582 58.307155 77.84103 52.255152 81.748047 44.792969 z M 18.980469 54.25 L 20.433594 58.244141 L 18.980469 61.146484 L 18.980469 54.25 z M 39.453125 55.931641 L 43.478516 57.138672 L 42.466797 58.660156 A 1.0002487 1.0002487 0 1 0 44.132812 59.767578 L 45.480469 57.740234 L 46.404297 58.017578 L 45.125 60.582031 A 1.0001 1.0001 0 1 0 46.914062 61.474609 L 48.347656 58.599609 L 63.201172 63.052734 C 57.000613 68.922473 50.747306 72.72741 45.683594 75.136719 L 45.179688 72.626953 A 1.0001 1.0001 0 0 0 44.183594 71.810547 A 1.0001 1.0001 0 0 0 43.21875 73.021484 L 43.810547 75.972656 C 42.801178 76.412349 41.861559 76.796656 40.988281 77.125 L 41.550781 74.882812 A 1.0001 1.0001 0 0 0 40.613281 73.625 A 1.0001 1.0001 0 0 0 39.609375 74.396484 L 38.724609 77.927734 C 38.249212 78.082592 37.805661 78.226914 37.408203 78.34375 L 37.929688 75.742188 A 1.0001 1.0001 0 0 0 36.935547 74.53125 A 1.0001 1.0001 0 0 0 35.96875 75.349609 L 35.267578 78.849609 C 34.520451 78.878882 33.791902 78.904425 33.107422 78.927734 L 39.453125 55.931641 z M 37.359375 55.996094 L 31.283203 78.013672 L 29.691406 74.392578 L 31.037109 73.71875 A 1.0001161 1.0001161 0 1 0 30.142578 71.929688 L 28.884766 72.560547 L 27.728516 69.933594 L 31.039062 68.273438 A 1.0001 1.0001 0 1 0 30.142578 66.486328 L 26.921875 68.099609 L 26.126953 66.292969 L 28.185547 65.607422 A 1.0005647 1.0005647 0 1 0 27.552734 63.708984 L 25.318359 64.455078 L 22.931641 59.03125 L 37.359375 55.996094 z M 21.462891 60.65625 L 29.511719 78.955078 C 27.53086 78.832679 25.957324 78.426707 24.703125 77.830078 L 25.210938 75.787109 A 1.0001 1.0001 0 0 0 24.271484 74.533203 A 1.0001 1.0001 0 0 0 23.269531 75.304688 L 22.919922 76.714844 C 22.25231 76.176409 21.717834 75.57285 21.263672 74.945312 L 22.46875 71.324219 A 1.0001 1.0001 0 0 0 21.53125 69.996094 A 1.0001 1.0001 0 0 0 20.570312 70.693359 L 19.945312 72.576172 C 19.009421 70.305041 18.980469 68.289063 18.980469 68.289062 A 2.0002 2.0002 0 0 0 18.980469 68.287109 L 18.980469 65.619141 L 21.462891 60.65625 z M 67.195312 64.626953 L 78.328125 76.453125 C 77.449081 76.509776 73.226177 76.762813 70.6875 76.921875 L 71.748047 75.152344 A 1.0001 1.0001 0 0 0 70.921875 73.626953 A 1.0001 1.0001 0 0 0 70.033203 74.125 L 68.265625 77.070312 C 67.538342 77.115344 67.161254 77.138966 66.369141 77.1875 L 67.150391 76.146484 A 1.0001 1.0001 0 0 0 66.386719 74.535156 A 1.0001 1.0001 0 0 0 65.550781 74.945312 L 63.75 77.347656 C 63.177791 77.38214 63.087102 77.390482 62.496094 77.425781 L 63.5 76.169922 A 1.0001 1.0001 0 0 0 62.689453 74.535156 A 1.0001 1.0001 0 0 0 61.939453 74.921875 L 59.804688 77.589844 C 59.301312 77.619256 58.896711 77.640403 58.386719 77.669922 L 58.896484 77.160156 A 1.0001 1.0001 0 0 0 58.169922 75.443359 A 1.0001 1.0001 0 0 0 57.482422 75.746094 L 55.394531 77.833984 C 52.98457 77.970645 50.608133 78.101233 48.210938 78.228516 C 53.80419 75.44297 60.586533 71.148661 67.195312 64.626953 z"/></svg>
+          <svg
+            class="logo"
+            xmlns="http://www.w3.org/2000/svg"
+            href="/"
+            viewBox="0 0 100 100"
+            width="100px"
+            height="100px"
+          >
+            <path
+              d="M 65.568359 10.353516 C 64.491903 10.370677 63.422969 10.405376 62.394531 10.447266 C 58.280779 10.614863 54.892578 10.949219 54.892578 10.949219 A 2.0002 2.0002 0 0 0 54.289062 11.107422 L 39.777344 17.457031 A 2.0002 2.0002 0 0 0 39.263672 17.785156 L 24.744141 30.484375 A 2.0002 2.0002 0 0 0 24.3125 31.017578 L 15.232422 47.359375 A 2.0002 2.0002 0 0 0 14.980469 48.330078 L 14.980469 68.287109 C 14.980444 68.290209 14.950179 72.043381 17.046875 75.775391 C 19.144438 79.508938 23.692208 83.216206 31.558594 82.988281 C 32.383132 82.964391 33.474264 82.915894 34.419922 82.880859 A 2.0002 2.0002 0 0 0 35.501953 82.955078 C 35.501953 82.955078 35.920876 82.8515 36.0625 82.820312 C 52.351915 82.160436 81.539062 80.263672 81.539062 80.263672 A 2.0002 2.0002 0 0 0 83.404297 78.408203 L 87.023438 26.716797 C 87.023438 26.716797 87.297539 23.536224 85.863281 20.011719 C 84.429023 16.487213 81.075286 12.484199 74.599609 10.990234 L 74.599609 10.992188 C 72.932481 10.607465 70.909596 10.428097 68.789062 10.367188 C 67.728797 10.336733 66.644816 10.336354 65.568359 10.353516 z M 65.644531 14.367188 C 66.689676 14.358252 67.733782 14.367017 68.728516 14.398438 C 69.682114 14.428558 70.580211 14.483719 71.398438 14.558594 L 64.214844 18.150391 L 58.417969 14.677734 C 59.571464 14.59531 60.950683 14.508788 62.556641 14.443359 C 63.553203 14.402759 64.599386 14.376123 65.644531 14.367188 z M 55.193359 15.076172 L 62.978516 19.742188 L 57.847656 35.970703 L 38.289062 53.757812 L 22.164062 57.150391 L 19.078125 48.671875 L 27.638672 33.265625 L 41.664062 20.998047 L 55.193359 15.076172 z M 74.693359 15.146484 C 75.6684 15.429399 76.517259 15.771724 77.265625 16.15625 L 74.603516 17.484375 A 1.0005541 1.0005541 0 1 0 75.496094 19.275391 L 79.193359 17.429688 C 79.728052 17.869527 80.189345 18.331969 80.578125 18.814453 L 79.273438 19.251953 A 1.0001 1.0001 0 1 0 79.908203 21.148438 L 81.710938 20.544922 C 81.878401 20.871009 82.026676 21.19632 82.158203 21.519531 C 83.216445 24.120026 83.037109 26.382813 83.037109 26.382812 A 2.0002 2.0002 0 0 0 83.035156 26.410156 L 82.623047 32.291016 L 68.677734 21.509766 A 1.0001 1.0001 0 0 0 68.056641 21.029297 L 66.041016 19.472656 L 74.693359 15.146484 z M 64.691406 20.957031 L 66.603516 22.435547 L 65.03125 27.142578 A 1.0001 1.0001 0 1 0 66.927734 27.777344 L 68.279297 23.730469 L 69.503906 24.679688 L 68.640625 28.115234 A 1.0001 1.0001 0 1 0 70.580078 28.603516 L 71.230469 26.013672 L 81.550781 33.990234 L 73.849609 34.814453 A 1.0001 1.0001 0 0 0 72.476562 34.962891 L 59.837891 36.314453 L 64.691406 20.957031 z M 47.056641 27.466797 C 46.940391 27.450391 46.819219 27.457734 46.699219 27.490234 C 46.209219 27.620234 45.920781 28.109609 46.050781 28.599609 C 46.180781 29.079609 46.670156 29.370234 47.160156 29.240234 C 47.640156 29.110234 47.930781 28.620859 47.800781 28.130859 C 47.710781 27.770859 47.405391 27.516016 47.056641 27.466797 z M 47.960938 34.728516 C 47.844062 34.712109 47.722109 34.7175 47.599609 34.75 C 47.119609 34.87 46.830937 35.369375 46.960938 35.859375 C 47.080938 36.339375 47.580312 36.63 48.070312 36.5 C 48.550312 36.37 48.840938 35.880625 48.710938 35.390625 C 48.613438 35.030625 48.311562 34.777734 47.960938 34.728516 z M 81.435547 36.015625 C 77.221448 46.192003 71.833731 54.031129 66.214844 60.029297 L 60.007812 38.306641 L 64.980469 37.775391 L 64.980469 39.25 A 1.0001 1.0001 0 1 0 66.980469 39.25 L 66.980469 37.560547 L 67.699219 37.484375 L 67.699219 40.160156 A 1.0001 1.0001 0 1 0 69.699219 40.160156 L 69.699219 37.269531 L 72.240234 36.998047 L 72.240234 41.070312 A 1.0001 1.0001 0 1 0 74.240234 41.070312 L 74.240234 36.785156 L 75.869141 36.609375 L 75.869141 38.349609 A 1.0001 1.0001 0 1 0 77.869141 38.349609 L 77.869141 36.396484 L 81.435547 36.015625 z M 57.994141 38.541016 L 64.515625 61.359375 L 48.277344 56.490234 A 1.0001 1.0001 0 0 0 47.964844 56.396484 L 45.798828 55.746094 A 1.0001 1.0001 0 0 0 44.951172 55.492188 L 40.742188 54.230469 L 57.994141 38.541016 z M 29.818359 41.078125 C 29.701953 41.061719 29.580938 41.067109 29.460938 41.099609 C 28.970937 41.229609 28.680547 41.720937 28.810547 42.210938 C 28.940547 42.690938 29.429922 42.979609 29.919922 42.849609 C 30.399922 42.719609 30.690313 42.230234 30.570312 41.740234 C 30.472812 41.380234 30.167578 41.127344 29.818359 41.078125 z M 81.748047 44.792969 L 79.638672 74.927734 L 68.59375 63.195312 C 73.293582 58.307155 77.84103 52.255152 81.748047 44.792969 z M 18.980469 54.25 L 20.433594 58.244141 L 18.980469 61.146484 L 18.980469 54.25 z M 39.453125 55.931641 L 43.478516 57.138672 L 42.466797 58.660156 A 1.0002487 1.0002487 0 1 0 44.132812 59.767578 L 45.480469 57.740234 L 46.404297 58.017578 L 45.125 60.582031 A 1.0001 1.0001 0 1 0 46.914062 61.474609 L 48.347656 58.599609 L 63.201172 63.052734 C 57.000613 68.922473 50.747306 72.72741 45.683594 75.136719 L 45.179688 72.626953 A 1.0001 1.0001 0 0 0 44.183594 71.810547 A 1.0001 1.0001 0 0 0 43.21875 73.021484 L 43.810547 75.972656 C 42.801178 76.412349 41.861559 76.796656 40.988281 77.125 L 41.550781 74.882812 A 1.0001 1.0001 0 0 0 40.613281 73.625 A 1.0001 1.0001 0 0 0 39.609375 74.396484 L 38.724609 77.927734 C 38.249212 78.082592 37.805661 78.226914 37.408203 78.34375 L 37.929688 75.742188 A 1.0001 1.0001 0 0 0 36.935547 74.53125 A 1.0001 1.0001 0 0 0 35.96875 75.349609 L 35.267578 78.849609 C 34.520451 78.878882 33.791902 78.904425 33.107422 78.927734 L 39.453125 55.931641 z M 37.359375 55.996094 L 31.283203 78.013672 L 29.691406 74.392578 L 31.037109 73.71875 A 1.0001161 1.0001161 0 1 0 30.142578 71.929688 L 28.884766 72.560547 L 27.728516 69.933594 L 31.039062 68.273438 A 1.0001 1.0001 0 1 0 30.142578 66.486328 L 26.921875 68.099609 L 26.126953 66.292969 L 28.185547 65.607422 A 1.0005647 1.0005647 0 1 0 27.552734 63.708984 L 25.318359 64.455078 L 22.931641 59.03125 L 37.359375 55.996094 z M 21.462891 60.65625 L 29.511719 78.955078 C 27.53086 78.832679 25.957324 78.426707 24.703125 77.830078 L 25.210938 75.787109 A 1.0001 1.0001 0 0 0 24.271484 74.533203 A 1.0001 1.0001 0 0 0 23.269531 75.304688 L 22.919922 76.714844 C 22.25231 76.176409 21.717834 75.57285 21.263672 74.945312 L 22.46875 71.324219 A 1.0001 1.0001 0 0 0 21.53125 69.996094 A 1.0001 1.0001 0 0 0 20.570312 70.693359 L 19.945312 72.576172 C 19.009421 70.305041 18.980469 68.289063 18.980469 68.289062 A 2.0002 2.0002 0 0 0 18.980469 68.287109 L 18.980469 65.619141 L 21.462891 60.65625 z M 67.195312 64.626953 L 78.328125 76.453125 C 77.449081 76.509776 73.226177 76.762813 70.6875 76.921875 L 71.748047 75.152344 A 1.0001 1.0001 0 0 0 70.921875 73.626953 A 1.0001 1.0001 0 0 0 70.033203 74.125 L 68.265625 77.070312 C 67.538342 77.115344 67.161254 77.138966 66.369141 77.1875 L 67.150391 76.146484 A 1.0001 1.0001 0 0 0 66.386719 74.535156 A 1.0001 1.0001 0 0 0 65.550781 74.945312 L 63.75 77.347656 C 63.177791 77.38214 63.087102 77.390482 62.496094 77.425781 L 63.5 76.169922 A 1.0001 1.0001 0 0 0 62.689453 74.535156 A 1.0001 1.0001 0 0 0 61.939453 74.921875 L 59.804688 77.589844 C 59.301312 77.619256 58.896711 77.640403 58.386719 77.669922 L 58.896484 77.160156 A 1.0001 1.0001 0 0 0 58.169922 75.443359 A 1.0001 1.0001 0 0 0 57.482422 75.746094 L 55.394531 77.833984 C 52.98457 77.970645 50.608133 78.101233 48.210938 78.228516 C 53.80419 75.44297 60.586533 71.148661 67.195312 64.626953 z"
+            />
+          </svg>
         </div>
         <nav class="header__menu">
           <ul class="header__menu-list">
@@ -45,20 +58,29 @@
     </header>
     <main class="content">
       <div class="content__sections">
-        <div class="hero section" id="about">
+        <div class="hero section" data-aos="fade-right" id="about">
           <div class="hero__inner container">
             <div class="hero__body">
               <span id="auto_typing_text"></span>
-              <button class="hero__button" id="hero__button" type="button" href="#contacts">
-                Let`s check!
+              <button
+                class="hero__button"
+                id="hero__button"
+                type="button"
+                href="#contacts"
+              >
+                Let's check!
               </button>
             </div>
             <div class="hero__photo">
-              <img src="./images/photo2.jpg" alt="my-photo" />
+              <img
+                src="./images/photo2.jpg"
+                alt="Egor Sinyavsky - Fullstack Developer"
+              />
             </div>
           </div>
         </div>
-        <div class="skills section" id="skills">
+
+        <div class="skills section" data-aos="fade-right" id="skills">
           <div class="skills__inner container">
             <h2 class="skills__title">
               <span class="skills__title__main-accent">HARD</span> skills
@@ -93,7 +115,8 @@
                     </li>
                     <li class="skills__item">
                       <span class="skills__item-title">
-                        Formik, React Hook Form, Yup, Axios, React Router, React Query
+                        Formik, React Hook Form, Yup, Axios, React Router, React
+                        Query
                       </span>
                     </li>
                   </ul>
@@ -115,7 +138,7 @@
                     </li>
                     <li class="skills__item">
                       <span class="skills__item-title">
-                        PostgreSql, MySql, Mongo Db
+                        PostgreSQL, MySQL, MongoDB
                       </span>
                     </li>
                   </ul>
@@ -144,247 +167,567 @@
                 </div>
               </div>
             </div>
+
             <h2 class="skills__title">
-              <span class="skills__title__main-accent">
-                SOFT</span> skills</h2>
+              <span class="skills__title__main-accent">SOFT</span> skills
+            </h2>
             <div class="skills__column">
               <div class="skills__body">
                 <ul class="skills__items">
                   <li class="skills__item">
                     <span class="skills__item-title">
-                      I know how to work in a team, I have experience in communication with designers, managers and other developers
+                      I know how to work in a team, I have experience in
+                      communication with designers, managers and other
+                      developers
                     </span>
                   </li>
                   <li class="skills__item">
-                    <span class="skills__item-title">I am responsible about deadlines</span></li>
-                  <li class="skills__item"><span class="skills__item-title">I am attentive to the details of the terms of reference</span></li>
-                  <li class="skills__item"><span class="skills__item-title">I am demanding of the quality of my code, I follow the code-style</span></li>
+                    <span class="skills__item-title"
+                      >I am responsible about deadlines</span
+                    >
+                  </li>
+                  <li class="skills__item">
+                    <span class="skills__item-title"
+                      >I am attentive to the details of the terms of
+                      reference</span
+                    >
+                  </li>
+                  <li class="skills__item">
+                    <span class="skills__item-title"
+                      >I am demanding of the quality of my code, I follow the
+                      code-style</span
+                    >
+                  </li>
                 </ul>
               </div>
-              </div>
             </div>
-        </div>
-        <div class="work-experience section" id="work-experience">
-          <div class="work-experience__inner container">
-              <h3 class="work-experience-title">Work <span class="text-accent">Experience</span></h3>
-              <article class="work-experience-card card card--hoverable">
-                  <time class="work-experience-card__date" datetime="2023-05">May 2023 - May 2024</time>
-                  <h3 class="work-experience-card__title">
-                      <a class="work-experience-card__link" href="https://www.itransition.com/" target="_blank" title="Open a new tab">Itransition</a>
-                  </h3>
-                  <div class="work-experience-card__position">Fullstack Developer</div>
-                  <div class="work-experience-card__description">
-                      <ul>
-                          <li>Developed and maintained full-stack applications with Django backend and React + TypeScript frontend</li>
-                          <li>Optimized deployment workflows using Docker and CI/CD pipelines</li>
-                          <li>Implemented Redux for state management to enhance performance</li>
-                          <li>Resolved complex bugs and improved UI/UX</li>
-                      </ul>
-                  </div>
-                  <div class="stack">
-                      <ul class="stack__list flow">
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/django.svg" alt="Django" title="Django" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/react.svg" alt="React" title="React" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/typescript.svg" alt="TypeScript" title="TypeScript" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/docker.svg" alt="Docker" title="Docker" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/redux.svg" alt="Redux" title="Redux" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/html.svg" alt="HTML" title="HTML" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/css.svg" alt="CSS" title="CSS" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                            <img class="stack__image" src="./icons/kubernetes.svg" alt="Kubernetes" title="Kubernetes" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                            <img class="stack__image" src="./icons/postgresql.svg" alt="PostgreSql" title="PostgreSql" width="36" height="36" loading="lazy">
-                          </li>
-                      </ul>
-                  </div>
-              </article>
-              <article class="work-experience-card card card--hoverable">
-                  <time class="work-experience-card__date" datetime="2023-02">February 2023 - May 2023</time>
-                  <h3 class="work-experience-card__title">
-                      <a class="work-experience-card__link" href="https://www.itransition.com/" target="_blank" title="Open a new tab">Itransition</a>
-                  </h3>
-                  <div class="work-experience-card__position">Fullstack Developer</div>
-                  <div class="work-experience-card__description">
-                      <ul>
-                          <li>Built RESTful APIs using Python (Flask)</li>
-                          <li>Integrated backend with Angular-based frontends</li>
-                          <li>Collaborated on feature development and code maintenance</li>
-                          <li>Debugged and fixed critical issues across the stack</li>
-                      </ul>
-                  </div>
-                  <div class="stack">
-                      <ul class="stack__list flow">
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/python.svg" alt="Python" title="Python" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/flask.svg" alt="Flask" title="Flask" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/typescript.svg" alt="TypeScript" title="TypeScript" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/angular.svg" alt="Angular" title="Angular" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/html.svg" alt="HTML" title="HTML" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/css.svg" alt="CSS" title="CSS" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/docker.svg" alt="Docker" title="Docker" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                            <img class="stack__image" src="./icons/postgresql.svg" alt="PostgreSql" title="PostgreSql" width="36" height="36" loading="lazy">
-                          </li>
-                      </ul>
-                  </div>
-              </article>
-              <article class="work-experience-card card card--hoverable">
-                  <time class="work-experience-card__date" datetime="2021-12">December 2021 - February 2023</time>
-                  <h3 class="work-experience-card__title">
-                      <a class="work-experience-card__link" href="https://www.itransition.com/" target="_blank" title="Open a new tab">Itransition</a>
-                  </h3>
-                  <div class="work-experience-card__position">Fullstack Developer</div>
-                  <div class="work-experience-card__description">
-                      <ul>
-                          <li>Developed dynamic frontend components using React</li>
-                          <li>Integrated frontend with Ruby on Rails backends</li>
-                          <li>Implemented new UI features to enhance user interaction</li>
-                          <li>Participated in bug-fixing and performance optimization</li>
-                      </ul>
-                  </div>
-                  <div class="stack">
-                      <ul class="stack__list flow">
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/ruby.svg" alt="Ruby" title="Ruby" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/rails.svg" alt="Ruby on Rails" title="Ruby on Rails" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/javascript.svg" alt="JavaScript" title="JavaScript" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/react.svg" alt="React" title="React" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/html.svg" alt="HTML" title="HTML" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/css.svg" alt="CSS" title="CSS" width="36" height="36" loading="lazy">
-                          </li>
-                          <li class="stack__item">
-                              <img class="stack__image" src="./icons/docker.svg" alt="Docker" title="Docker" width="36" height="36" loading="lazy">
-                          </li>
-                      </ul>
-                  </div>
-              </article>
           </div>
+        </div>
+
+        <div
+          class="work-experience section"
+          data-aos="fade-right"
+          id="work-experience"
+        >
+          <div class="work-experience__inner container">
+            <h3 class="work-experience-title">
+              Work <span class="text-accent">Experience</span>
+            </h3>
+
+            <article class="work-experience-card card card--hoverable">
+              <time class="work-experience-card__date" datetime="2023-05"
+                >May 2023 - May 2024</time
+              >
+              <h3 class="work-experience-card__title">
+                <a
+                  class="work-experience-card__link"
+                  href="https://www.itransition.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Open Itransition website"
+                  >Itransition</a
+                >
+              </h3>
+              <div class="work-experience-card__position">
+                Fullstack Developer
+              </div>
+              <div class="work-experience-card__description">
+                <ul>
+                  <li>
+                    Developed and maintained full-stack applications with Django
+                    backend and React + TypeScript frontend
+                  </li>
+                  <li>
+                    Optimized deployment workflows using Docker and CI/CD
+                    pipelines
+                  </li>
+                  <li>
+                    Implemented Redux for state management to enhance
+                    performance
+                  </li>
+                  <li>Resolved complex bugs and improved UI/UX</li>
+                </ul>
+              </div>
+              <div class="stack">
+                <ul class="stack__list flow">
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/django.svg"
+                      alt="Django"
+                      title="Django"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/react.svg"
+                      alt="React"
+                      title="React"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/typescript.svg"
+                      alt="TypeScript"
+                      title="TypeScript"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/docker.svg"
+                      alt="Docker"
+                      title="Docker"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/redux.svg"
+                      alt="Redux"
+                      title="Redux"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/html.svg"
+                      alt="HTML"
+                      title="HTML"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/css.svg"
+                      alt="CSS"
+                      title="CSS"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/kubernetes.svg"
+                      alt="Kubernetes"
+                      title="Kubernetes"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/postgresql.svg"
+                      alt="PostgreSQL"
+                      title="PostgreSQL"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="work-experience-card card card--hoverable">
+              <time class="work-experience-card__date" datetime="2023-02"
+                >February 2023 - May 2023</time
+              >
+              <h3 class="work-experience-card__title">
+                <a
+                  class="work-experience-card__link"
+                  href="https://www.itransition.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Open Itransition website"
+                  >Itransition</a
+                >
+              </h3>
+              <div class="work-experience-card__position">
+                Fullstack Developer
+              </div>
+              <div class="work-experience-card__description">
+                <ul>
+                  <li>Built RESTful APIs using Python (Flask)</li>
+                  <li>Integrated backend with Angular-based frontends</li>
+                  <li>
+                    Collaborated on feature development and code maintenance
+                  </li>
+                  <li>Debugged and fixed critical issues across the stack</li>
+                </ul>
+              </div>
+              <div class="stack">
+                <ul class="stack__list flow">
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/python.svg"
+                      alt="Python"
+                      title="Python"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/flask.svg"
+                      alt="Flask"
+                      title="Flask"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/typescript.svg"
+                      alt="TypeScript"
+                      title="TypeScript"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/angular.svg"
+                      alt="Angular"
+                      title="Angular"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/html.svg"
+                      alt="HTML"
+                      title="HTML"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/css.svg"
+                      alt="CSS"
+                      title="CSS"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/docker.svg"
+                      alt="Docker"
+                      title="Docker"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/postgresql.svg"
+                      alt="PostgreSQL"
+                      title="PostgreSQL"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="work-experience-card card card--hoverable">
+              <time class="work-experience-card__date" datetime="2021-12"
+                >December 2021 - February 2023</time
+              >
+              <h3 class="work-experience-card__title">
+                <a
+                  class="work-experience-card__link"
+                  href="https://www.itransition.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Open Itransition website"
+                  >Itransition</a
+                >
+              </h3>
+              <div class="work-experience-card__position">
+                Fullstack Developer
+              </div>
+              <div class="work-experience-card__description">
+                <ul>
+                  <li>Developed dynamic frontend components using React</li>
+                  <li>Integrated frontend with Ruby on Rails backends</li>
+                  <li>
+                    Implemented new UI features to enhance user interaction
+                  </li>
+                  <li>
+                    Participated in bug-fixing and performance optimization
+                  </li>
+                </ul>
+              </div>
+              <div class="stack">
+                <ul class="stack__list flow">
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/ruby.svg"
+                      alt="Ruby"
+                      title="Ruby"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/rails.svg"
+                      alt="Ruby on Rails"
+                      title="Ruby on Rails"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/javascript.svg"
+                      alt="JavaScript"
+                      title="JavaScript"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/react.svg"
+                      alt="React"
+                      title="React"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/html.svg"
+                      alt="HTML"
+                      title="HTML"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/css.svg"
+                      alt="CSS"
+                      title="CSS"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="stack__item">
+                    <img
+                      class="stack__image"
+                      src="./icons/docker.svg"
+                      alt="Docker"
+                      title="Docker"
+                      width="36"
+                      height="36"
+                      loading="lazy"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-      
-  </main>
+    </main>
+
     <footer class="footer">
       <div class="footer__init container" id="contacts">
-          <div class="footer__body">
-            <div class="footer__body-title">
-              Do you want to ask
-              <span class="text-accent"><br>something interesting?</span>
-            </div>
-            <div class="footer__body-sub-title">
-              Contact me. I am in touch mon-fri from 8 am to 8pm (gmt).
-            </div>
+        <div class="footer__body">
+          <div class="footer__body-title">
+            Do you want to ask
+            <span class="text-accent"><br />something interesting?</span>
           </div>
-          <div class="footer__contacts">
-            <div class="footer__soc1als">
-              <ul class="footer__soc1als__list">
-                <li class="footer__soc1als__list-item">
-                  <a href="https://github.com/e-sinyavsky" class="footer__soc1als__list-link" target="_blank" title="GitHub">
-                    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fill="#000000" d="M10,0 C15.523,0 20,4.59 20,10.253 C20,14.782 17.138,18.624 13.167,19.981 C12.66,20.082 12.48,19.762 12.48,19.489 C12.48,19.151 12.492,18.047 12.492,16.675 C12.492,15.719 12.172,15.095 11.813,14.777 C14.04,14.523 16.38,13.656 16.38,9.718 C16.38,8.598 15.992,7.684 15.35,6.966 C15.454,6.707 15.797,5.664 15.252,4.252 C15.252,4.252 14.414,3.977 12.505,5.303 C11.706,5.076 10.85,4.962 10,4.958 C9.15,4.962 8.295,5.076 7.497,5.303 C5.586,3.977 4.746,4.252 4.746,4.252 C4.203,5.664 4.546,6.707 4.649,6.966 C4.01,7.684 3.619,8.598 3.619,9.718 C3.619,13.646 5.954,14.526 8.175,14.785 C7.889,15.041 7.63,15.493 7.54,16.156 C6.97,16.418 5.522,16.871 4.63,15.304 C4.63,15.304 4.101,14.319 3.097,14.247 C3.097,14.247 2.122,14.234 3.029,14.87 C3.029,14.87 3.684,15.185 4.139,16.37 C4.139,16.37 4.726,18.2 7.508,17.58 C7.513,18.437 7.522,19.245 7.522,19.489 C7.522,19.76 7.338,20.077 6.839,19.982 C2.865,18.627 0,14.783 0,10.253 C0,4.59 4.478,0 10,0"/>
-                    </svg>
-                  </a>
-                </li>
-                <li class="soc1als__item">
-                  <a href="https://www.linkedin.com/in/egor-sinyavsky-30b779212/" class="footer__soc1als__list-link" target="_blank" title="LinkedIn">
-                    <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512" xml:space="preserve">
-                      <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9
-                        V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7
-                        C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6
-                        c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z" />
-                      </svg>
-                    </a>
-                </li>
-                <li class="footer__soc1als__list-item">
-                  <a href="https://t.me/egor_sinyavsky" class="footer__soc1als__list-link" target="_blank" title="Telegram">
-                    <svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M22.122 10.040c0.006-0 0.014-0 0.022-0 0.209 0 0.403 0.065 0.562 0.177l-0.003-0.002c0.116 0.101 0.194 0.243 0.213 0.403l0 0.003c0.020 0.122 0.031 0.262 0.031 0.405 0 0.065-0.002 0.129-0.007 0.193l0-0.009c-0.225 2.369-1.201 8.114-1.697 10.766-0.21 1.123-0.623 1.499-1.023 1.535-0.869 0.081-1.529-0.574-2.371-1.126-1.318-0.865-2.063-1.403-3.342-2.246-1.479-0.973-0.52-1.51 0.322-2.384 0.221-0.23 4.052-3.715 4.127-4.031 0.004-0.019 0.006-0.040 0.006-0.062 0-0.078-0.029-0.149-0.076-0.203l0 0c-0.052-0.034-0.117-0.053-0.185-0.053-0.045 0-0.088 0.009-0.128 0.024l0.002-0.001q-0.198 0.045-6.316 4.174c-0.445 0.351-1.007 0.573-1.619 0.599l-0.006 0c-0.867-0.105-1.654-0.298-2.401-0.573l0.074 0.024c-0.938-0.306-1.683-0.467-1.619-0.985q0.051-0.404 1.114-0.827 6.548-2.853 8.733-3.761c1.607-0.853 3.47-1.555 5.429-2.010l0.157-0.031zM15.93 1.025c-8.302 0.020-15.025 6.755-15.025 15.060 0 8.317 6.742 15.060 15.060 15.060s15.060-6.742 15.060-15.060c0-8.305-6.723-15.040-15.023-15.060h-0.002q-0.035-0-0.070 0z"></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="footer__soc1als__list-item">
-                  <a href="mailto:lokaloka5489318@gmail.com" class="footer__soc1als__list-link" target="_blank" title="Gmail">
-                    <svg fill="#000000" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve">
-                      <g>
-                        <path d="M16,16.8l13.8-9.2C29.2,5.5,27.3,4,25,4H7C4.7,4,2.8,5.5,2.2,7.6L16,16.8z"/>
-                        <path d="M16.6,18.8C16.4,18.9,16.2,19,16,19s-0.4-0.1-0.6-0.2L2,9.9V23c0,2.8,2.2,5,5,5h1v3c0,0.4,0.2,0.7,0.5,0.9 C8.7,32,8.8,32,9,32c0.2,0,0.4-0.1,0.6-0.2c3.8-2.5,8.1-3.8,12.7-3.8H25c2.8,0,5-2.2,5-5V9.9L16.6,18.8z"/>
-                      </g>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          <div class="footer__copyright" bis_skin_checked="1"> © Egor Sinyavsky, 2025 </div>
+          <div class="footer__body-sub-title">
+            Contact me. I am in touch Mon-Fri from 8 am to 8 pm (GMT).
+          </div>
+        </div>
+        <div class="footer__contacts">
+          <div class="footer__soc1als">
+            <ul class="footer__soc1als__list">
+              <li class="footer__soc1als__list-item">
+                <a
+                  href="https://github.com/e-sinyavsky"
+                  class="footer__soc1als__list-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub"
+                >
+                  <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill="#000000"
+                      d="M10,0 C15.523,0 20,4.59 20,10.253 C20,14.782 17.138,18.624 13.167,19.981 C12.66,20.082 12.48,19.762 12.48,19.489 C12.48,19.151 12.492,18.047 12.492,16.675 C12.492,15.719 12.172,15.095 11.813,14.777 C14.04,14.523 16.38,13.656 16.38,9.718 C16.38,8.598 15.992,7.684 15.35,6.966 C15.454,6.707 15.797,5.664 15.252,4.252 C15.252,4.252 14.414,3.977 12.505,5.303 C11.706,5.076 10.85,4.962 10,4.958 C9.15,4.962 8.295,5.076 7.497,5.303 C5.586,3.977 4.746,4.252 4.746,4.252 C4.203,5.664 4.546,6.707 4.649,6.966 C4.01,7.684 3.619,8.598 3.619,9.718 C3.619,13.646 5.954,14.526 8.175,14.785 C7.889,15.041 7.63,15.493 7.54,16.156 C6.97,16.418 5.522,16.871 4.63,15.304 C4.63,15.304 4.101,14.319 3.097,14.247 C3.097,14.247 2.122,14.234 3.029,14.87 C3.029,14.87 3.684,15.185 4.139,16.37 C4.139,16.37 4.726,18.2 7.508,17.58 C7.513,18.437 7.522,19.245 7.522,19.489 C7.522,19.76 7.338,20.077 6.839,19.982 C2.865,18.627 0,14.783 0,10.253 C0,4.59 4.478,0 10,0"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__soc1als__list-item">
+                <a
+                  href="https://www.linkedin.com/in/egor-sinyavsky-30b779212/"
+                  class="footer__soc1als__list-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="LinkedIn"
+                >
+                  <svg
+                    fill="#000000"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-143 145 512 512"
+                  >
+                    <path
+                      d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9
+                      V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7
+                      C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6
+                      c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__soc1als__list-item">
+                <a
+                  href="https://t.me/egor_sinyavsky"
+                  class="footer__soc1als__list-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Telegram"
+                >
+                  <svg
+                    fill="#000000"
+                    viewBox="0 0 32 32"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.122 10.040c0.006-0 0.014-0 0.022-0 0.209 0 0.403 0.065 0.562 0.177l-0.003-0.002c0.116 0.101 0.194 0.243 0.213 0.403l0 0.003c0.020 0.122 0.031 0.262 0.031 0.405 0 0.065-0.002 0.129-0.007 0.193l0-0.009c-0.225 2.369-1.201 8.114-1.697 10.766-0.21 1.123-0.623 1.499-1.023 1.535-0.869 0.081-1.529-0.574-2.371-1.126-1.318-0.865-2.063-1.403-3.342-2.246-1.479-0.973-0.52-1.51 0.322-2.384 0.221-0.23 4.052-3.715 4.127-4.031 0.004-0.019 0.006-0.040 0.006-0.062 0-0.078-0.029-0.149-0.076-0.203l0 0c-0.052-0.034-0.117-0.053-0.185-0.053-0.045 0-0.088 0.009-0.128 0.024l0.002-0.001q-0.198 0.045-6.316 4.174c-0.445 0.351-1.007 0.573-1.619 0.599l-0.006 0c-0.867-0.105-1.654-0.298-2.401-0.573l0.074 0.024c-0.938-0.306-1.683-0.467-1.619-0.985q0.051-0.404 1.114-0.827 6.548-2.853 8.733-3.761c1.607-0.853 3.47-1.555 5.429-2.010l0.157-0.031zM15.93 1.025c-8.302 0.020-15.025 6.755-15.025 15.060 0 8.317 6.742 15.060 15.060 15.060s15.060-6.742 15.060-15.060c0-8.305-6.723-15.040-15.023-15.060h-0.002q-0.035-0-0.070 0z"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__soc1als__list-item">
+                <a
+                  href="mailto:lokaloka5489318@gmail.com"
+                  class="footer__soc1als__list-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Gmail"
+                >
+                  <svg
+                    fill="#000000"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32"
+                  >
+                    <g>
+                      <path
+                        d="M16,16.8l13.8-9.2C29.2,5.5,27.3,4,25,4H7C4.7,4,2.8,5.5,2.2,7.6L16,16.8z"
+                      />
+                      <path
+                        d="M16.6,18.8C16.4,18.9,16.2,19,16,19s-0.4-0.1-0.6-0.2L2,9.9V23c0,2.8,2.2,5,5,5h1v3c0,0.4,0.2,0.7,0.5,0.9 C8.7,32,8.8,32,9,32c0.2,0,0.4-0.1,0.6-0.2c3.8-2.5,8.1-3.8,12.7-3.8H25c2.8,0,5-2.2,5-5V9.9L16.6,18.8z"
+                      />
+                    </g>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__copyright">© Egor Sinyavsky, 2025</div>
         </div>
       </div>
     </footer>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-      window.addEventListener('load', function() {
-          window.scrollTo(0, 0);
+      window.addEventListener("load", function () {
+        window.scrollTo(0, 0);
       });
 
       function handleAnchorClick(e) {
         e.preventDefault();
-        
-        const burger = document.querySelector('.header__burger');
-        const menu = document.querySelector('.header__menu');
-        if (burger.classList.contains('active')) {
-          burger.classList.remove('active');
-          menu.classList.remove('open');
+
+        const burger = document.querySelector(".header__burger");
+        const menu = document.querySelector(".header__menu");
+        if (burger.classList.contains("active")) {
+          burger.classList.remove("active");
+          menu.classList.remove("open");
         }
-        
-        const targetId = this.getAttribute('href') || this.getAttribute('data-target');
-        if (!targetId || targetId === '#') return;
-        
+
+        const targetId =
+          this.getAttribute("href") || this.getAttribute("data-target");
+        if (!targetId || targetId === "#") return;
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-          const headerHeight = document.querySelector('.header').offsetHeight;
-          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-          
+          const headerHeight = document.querySelector(".header").offsetHeight;
+          const targetPosition =
+            targetElement.getBoundingClientRect().top +
+            window.pageYOffset -
+            headerHeight;
+
           window.scrollTo({
             top: targetPosition,
-            behavior: 'smooth'
+            behavior: "smooth",
           });
-          
+
           if (history.pushState) {
             history.pushState(null, null, targetId);
           } else {
@@ -393,18 +736,19 @@
         }
       }
 
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', handleAnchorClick);
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", handleAnchorClick);
       });
 
-      document.getElementById("hero__button").addEventListener("click", handleAnchorClick);
+      document
+        .getElementById("hero__button")
+        .addEventListener("click", handleAnchorClick);
 
       var typed = new Typed("#auto_typing_text", {
         strings: [
           '<span class="text-accent">Hello!</span> My name is Sinyavsky Egor.\n^500\n<span class="highlight">Let me show you my capabilities...</span> ^1000\n<span class="highlight">I can do some great things for you.</span>',
         ],
-        typeSpeed: 40,
-        backSpeed: 20,
+        typeSpeed: 30,
         loop: false,
         showCursor: false,
         onComplete: function (self) {
@@ -414,18 +758,66 @@
         },
       });
 
-      document.querySelector(".header__burger").addEventListener("click", function () {
-        this.classList.toggle("active");
-        document.querySelector(".header__menu").classList.toggle("open");
+      document
+        .querySelector(".header__burger")
+        .addEventListener("click", function () {
+          this.classList.toggle("active");
+          document.querySelector(".header__menu").classList.toggle("open");
+        });
+
+      const header = document.querySelector(".header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
       });
 
-      const header = document.querySelector('.header');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
+      document.addEventListener("DOMContentLoaded", function () {
+        // Настройки для Intersection Observer
+        const options = {
+          threshold: 0.1, // Срабатывает, когда 10% элемента видно
+          rootMargin: "0px 0px -50px 0px", // Небольшой отступ снизу
+        };
+
+        // Создаем observer
+        const observer = new IntersectionObserver(function (entries, observer) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target); // Прекращаем наблюдение после появления
+            }
+          });
+        }, options);
+
+        // Находим все секции и начинаем наблюдать
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const cards = gsap.utils.toArray(".work-experience-card");
+        cards.forEach((card, i) => {
+          gsap.from(card, {
+            y: 100,
+            rotationX: 15,
+            rotationY: i % 2 === 0 ? -10 : 10,
+            opacity: 0,
+            duration: 1,
+            ease: "back.out(1.0)",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          });
+        });
       });
     </script>
   </body>

@@ -1,119 +1,119 @@
-@use '../helpers' as *;
+@use "../helpers" as *;
 
 .footer {
-    margin-top: rem(160);
-         
-    @include laptop {
-        padding: 0 rem(40);
-    }
-    @include laptop {
-        margin-top: rem(80);
+  margin-top: rem(160);
+
+  @include laptop {
+    padding: 0 rem(40);
+  }
+  @include laptop {
+    margin-top: rem(80);
+  }
+
+  @include mobile {
+    margin-top: rem(40);
+  }
+
+  &__init {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: rem(80);
+    align-items: stretch;
+    border-top: rem(1) solid;
+    border-right: rem(1) solid;
+    border-left: rem(1) solid;
+    border-radius: rem(40);
+    padding: rem(30);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(60);
+    flex: 1 0 rem(200);
+
+    &-title {
+      font-size: 34px;
     }
 
-    @include mobile {
-        margin-top: rem(40);
+    &-sub-title {
+      font-size: 14px;
     }
-    
+
+    @include laptop {
+      &-title {
+        font-size: 28px;
+      }
+
+      &-subtitle {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(20);
+    flex: 1 0 rem(200);
+  }
+
+  &__soc1als {
+    &__list {
+      display: flex;
+      justify-content: flex-end;
+      column-gap: rem(50);
+
+      &-link {
+        svg {
+          height: rem(50);
+          width: rem(50);
+
+          @include laptop {
+            height: rem(35);
+            width: rem(35);
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: end;
+  }
+
+  @include mobile {
     &__init {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-block: rem(80);
-        align-items: stretch;
-        border-top: rem(1) solid;
-        border-right: rem(1) solid;
-        border-left: rem(1) solid;
-        border-radius: rem(40);
-        padding: rem(30);
+      flex-direction: column;
+      gap: rem(25);
+      text-align: center;
     }
 
     &__body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: rem(60);
-        flex: 1 0 rem(200);
-
-        &-title {
-            font-size: 34px;
-        }
-
-        &-sub-title {
-            font-size: 14px;
-        }
-
-        @include laptop {
-            &-title {
-                font-size: 28px;
-            }
-
-            &-subtitle {
-                font-size: 12px;
-            }
-        }
-    }
-
-    &__contacts {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: rem(20);
-        flex: 1 0 rem(200);
+      flex: 0;
+      gap: rem(25);
     }
 
     &__soc1als {
-        &__list {
-            display: flex;
-            justify-content: flex-end;
-            column-gap: rem(50);
+      &__list {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
 
-            &-link {
-                svg {
-                    height: rem(50);
-                    width: rem(50);
-
-                    @include laptop {
-                        height: rem(35);
-                        width: rem(35);
-                    }
-                }
-            }
-        }
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: rem(25);
+      flex: 0;
     }
 
     &__copyright {
-        text-align: end;
+      text-align: center;
     }
-
-    @include mobile {
-        &__init {
-            flex-direction: column;
-            gap: rem(25);
-            text-align: center;
-        }
-
-        &__body {
-            flex: 0;
-            gap: rem(25);
-        }
-
-        &__soc1als {
-            &__list {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-
-        &__contacts {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: rem(25);
-            flex: 0;
-        }
-
-        &__copyright {
-            text-align: center;
-        }
-    }
+  }
 }

@@ -29,16 +29,7 @@ body,
   Убираем внешние отступы вертикали нужным тегам,
   у которых есть атрибут class
  */
-:where(h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-dl):where([class]) {
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
   margin-block: 0;
 }
 
@@ -155,8 +146,7 @@ label {
   (за исключением тех, у которых уже указан
   атрибут fill со значением 'none' или начинается с 'url')
  */
-:where([fill]:not([fill=none],
-[fill^=url])) {
+:where([fill]:not([fill=none], [fill^=url])) {
   fill: currentColor;
 }
 
@@ -165,8 +155,7 @@ label {
   (за исключением тех, у которых уже указан
   атрибут stroke со значением 'none')
  */
-:where([stroke]:not([stroke=none],
-[stroke^=url])) {
+:where([stroke]:not([stroke=none], [stroke^=url])) {
   stroke: currentColor;
 }
 
@@ -336,6 +325,7 @@ a[class] {
   z-index: 100;
   background-color: var(--main-background-color);
   transition: all 0.2s ease;
+  height: 5rem;
 }
 .header__logo {
   transition: transform 0.2s ease;
@@ -362,6 +352,7 @@ a[class] {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 @media (width <= 90.06125rem) {
   .header__inner {
@@ -616,15 +607,14 @@ a[class] {
   .content__sections .hero__photo {
     margin-top: 0.9375rem;
     order: -1;
-    flex: 0 0 18.75rem;
-    height: 31.25rem;
-    width: 18.75rem;
+    flex: 0 0 14.0625rem;
+    width: 14.0625rem;
   }
   .content__sections .hero__body {
     max-width: 100%;
   }
   .content__sections .hero__body #auto_typing_text {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 .content__sections .skills {
@@ -710,9 +700,6 @@ a[class] {
 .content__sections .skills__item-title {
   padding: 0 1.25rem;
 }
-.content__sections .work-experience {
-  padding: 4rem 0;
-}
 @media (width <= 90.06125rem) {
   .content__sections .work-experience__inner {
     padding: 0 2.5rem;
@@ -728,16 +715,15 @@ a[class] {
   color: var(--color-accent);
 }
 .content__sections .work-experience-card {
-  background: var(--color-bg-primary);
   border-radius: 12px;
   padding: 2.5rem;
   margin-bottom: 2rem;
   transition: all 0.3s ease;
-  border: 1px solid var(--color-border);
-  position: relative;
-  overflow: hidden;
+  border-left: 4px solid var(--color-black);
   box-shadow: 0 10px 30px var(--color-black);
-  border-color: var(--color-accent);
+}
+[data-theme=dark] .content__sections .work-experience-card {
+  border-left: 4px solid var(--color-accent);
 }
 .content__sections .work-experience-card__date {
   display: inline-block;

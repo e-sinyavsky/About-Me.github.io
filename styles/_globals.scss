@@ -1,37 +1,38 @@
-@use 'helpers' as *;
+@use "helpers" as *;
 
 body {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--main-background-color);
-    font-family: var(--font-family-base);
-    transition: background-color var(--transition-duration), color var(--transition-duration);
-    color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-background-color);
+  font-family: var(--font-family-base);
+  transition: background-color var(--transition-duration),
+    color var(--transition-duration);
+  color: var(--text-color);
 
-    // @include laptop {
-    //     padding: 0 rem(40);
-    // }
+  // @include laptop {
+  //     padding: 0 rem(40);
+  // }
 }
 
 main {
-    flex: 1;
+  flex: 1;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .open {
-    display: flex !important;
+  display: flex !important;
 }
 
 .is-show {
-    display: block !important;
+  display: block !important;
 }
 
 .text-accent {
-    color: var(--color-accent);
-    font-weight: 600;
+  color: var(--color-accent);
+  font-weight: 600;
 }
 
 a,
@@ -41,17 +42,17 @@ input,
 textarea,
 select,
 svg * {
-    transition-duration: var(--transition-duration);
+  transition-duration: var(--transition-duration);
 }
 
 a {
-    color: inherit;
+  color: inherit;
 
-    @include hover {
-        color: var(--color-accent);
-    }
+  @include hover {
+    color: var(--color-accent);
+  }
 
-    &[class] {
-        text-decoration: none;
-    }
+  &[class] {
+    text-decoration: none;
+  }
 }
