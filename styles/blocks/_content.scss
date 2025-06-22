@@ -89,7 +89,7 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
-          object-position: center;
+          object-position: top;
           transition: transform 0.3s ease, filter 0.3s ease;
         }
 
@@ -432,8 +432,8 @@
       }
 
       &__item {
-        border: rem(2) solid var(--color-black);
-        border-radius: rem(50);
+        border: #{rem(2)} solid var(--color-black);
+        border-radius: #{rem(50)};
         padding: rem(13);
         background-color: var(--color-accent);
         transition: transform 0.2s;
@@ -443,7 +443,7 @@
         }
 
         [data-theme="dark"] & {
-          border: rem(2) solid;
+          border: #{rem(2)} solid;
         }
       }
 
