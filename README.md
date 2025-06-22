@@ -4,8 +4,8 @@
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
 <div align="center">
-  <img src="https://placehold.co/800x400/3a86ff/white?text=Скриншот+Сайта" alt="Предпросмотр сайта" width="80%"/>
-  <p><em>![image](https://github.com/user-attachments/assets/cdb16595-547e-4597-b91b-5e4ccd21b8b2)</em></p>
+  <img src="https://github.com/user-attachments/assets/cdb16595-547e-4597-b91b-5e4ccd21b8b2" alt="Предпросмотр сайта" width="80%"/>
+  <p><em></em></p>
 </div>
 
 ## ✨ Особенности
