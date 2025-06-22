@@ -13,6 +13,7 @@ export const translations = {
       title:
         "<span class='text-accent'>Hello!</span> My name is Sinyavsky Egor.\nLet me show you my capabilities...\nI can do some great things for you.",
       button: "Let's check!",
+      pdf_button: "Download CV",
     },
     skills: {
       hard: "<span class='skills__title__main-accent'>HARD</span> skills",
@@ -87,6 +88,7 @@ export const translations = {
       title:
         "<span class='text-accent'>Привет!</span> Меня зовут Синявский Егор.\nПозвольте показать вам мои возможности...\nЯ могу сделать для вас отличные вещи.",
       button: "Связаться!",
+      pdf_button: "Скачать CV",
     },
     skills: {
       hard: "<span class='skills__title__main-accent'>ТЕХНИЧЕСКИЕ</span> навыки",

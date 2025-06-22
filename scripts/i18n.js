@@ -64,6 +64,7 @@ function updateTexts() {
   );
   updateElement('[i18n="header.nav.contacts"]', langData.header?.nav?.contacts);
   updateElement('[i18n="hero.button"]', langData.hero?.button);
+  updateElement('[i18n="hero.pdf_button"]', langData.hero?.pdf_button);
 
   updateElement('[i18n="skills.frontend"]', langData.skills?.frontend);
   updateElement('[i18n="skills.backend"]', langData.skills?.backend);
