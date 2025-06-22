@@ -1,4 +1,3 @@
-```markdown
 # 🌟 Обо Мне - Персональная Страница 👋
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-brightgreen?style=for-the-badge&logo=github)](https://e-sinyavsky.github.io/About-Me.github.io/)
