@@ -26,7 +26,7 @@ document
 
       link.click();
 
-      await new Promise((resolve) => setTimeout(resolve, 200));
+      await new Promise((resolve) => setTimeout(resolve, 3000));
       document.body.removeChild(link);
     } catch (error) {
       console.error("Download failed:", error);
