@@ -6,6 +6,7 @@ export const translations = {
         skills: "Skills",
         experience: "Work Experience",
         contacts: "Contacts",
+        education: "Education",
       },
     },
     hero: {
@@ -52,6 +53,20 @@ export const translations = {
     experience: {
       title: "Work <span class='text-accent'>Experience</span>",
     },
+    educations: {
+      title: "Education",
+      bguir: {
+        title:
+          "Belarusian State University of Informatics and Radioelectronics",
+        badge: "Secondary-Special",
+        speciality: "Speciality - Systems Engineer",
+      },
+      mtek: {
+        title: "Molodechno Trade and Economic College",
+        badge: "Higher",
+        speciality: "Speciality - Technician programmer",
+      },
+    },
     footer: {
       title:
         "Do you want to ask <span class='text-accent'><br />something interesting?</span>",
@@ -65,6 +80,7 @@ export const translations = {
         skills: "Навыки",
         experience: "Опыт работы",
         contacts: "Контакты",
+        education: "Образование",
       },
     },
     hero: {
@@ -110,6 +126,20 @@ export const translations = {
     },
     experience: {
       title: "Опыт <span class='text-accent'>работы</span>",
+    },
+    educations: {
+      title: "Образование",
+      bguir: {
+        title:
+          "Белорусский Государственный Университет Информатики и Радиоэлектроники",
+        badge: "Высшее",
+        speciality: "Специальость - Инженер-Системотехник (высшее)",
+      },
+      mtek: {
+        title: "Молодечненский Тогово-Экономический Колледж",
+        badge: "Средне-Специальное",
+        speciality: "Специальность - Техник-Программист",
+      },
     },
     footer: {
       title:

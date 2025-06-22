@@ -274,16 +274,34 @@
           flex: 1 0 rem(100);
           border-radius: rem(10);
           padding: rem(20);
-          border-top: rem(10) solid var(--color-black);
+          border-top: rem(15) solid var(--color-black);
           box-shadow: 0 rem(15) rem(35) var(--color-black);
           display: flex;
           justify-content: space-between;
           flex-direction: column;
           transition: transform 0.2s ease, box-shadow 0.2s ease;
+          gap: rem(40);
 
           &-title {
             font-size: rem(23);
             margin-bottom: 0.5rem;
+          }
+
+          &-badge {
+            border: 1px solid var(--color-black);
+            border-radius: rem(25);
+            padding: rem(10);
+            font-size: rem(12);
+            width: fit-content;
+          }
+
+          &:hover {
+            .education__body-card-badge {
+              background-color: var(--color-accent);
+              [data-theme="dark"] & {
+                color: var(--color-black);
+              }
+            }
           }
 
           [data-theme="dark"] & {

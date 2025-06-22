@@ -29,6 +29,36 @@ function updateTexts() {
   updateElement('[i18n="header.nav.about"]', langData.header?.nav?.about);
   updateElement('[i18n="header.nav.skills"]', langData.header?.nav?.skills);
   updateElement(
+    '[i18n="header.nav.education"]',
+    langData.header?.nav?.education
+  );
+  updateElement('[i18n="educations.title"]', langData.educations?.title);
+  updateElement(
+    '[i18n="educations.bguir.title"]',
+    langData.educations?.bguir?.title
+  );
+  updateElement(
+    '[i18n="educations.bguir.badge"]',
+    langData.educations?.bguir?.badge
+  );
+  updateElement(
+    '[i18n="educations.bguir.speciality"]',
+    langData.educations?.bguir?.speciality
+  );
+  updateElement(
+    '[i18n="educations.mtek.title"]',
+    langData.educations?.mtek?.title
+  );
+  updateElement(
+    '[i18n="educations.mtek.badge"]',
+    langData.educations?.mtek?.badge
+  );
+  updateElement(
+    '[i18n="educations.mtek.speciality"]',
+    langData.educations?.mtek?.speciality
+  );
+
+  updateElement(
     '[i18n="header.nav.experience"]',
     langData.header?.nav?.experience
   );
