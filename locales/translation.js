@@ -65,7 +65,7 @@ export const translations = {
       mtek: {
         title: "Molodechno Trade and Economic College",
         badge: "Higher",
-        speciality: "Speciality - Technician programmer",
+        speciality: "Speciality: Technician Programmer",
       },
     },
     footer: {
@@ -135,7 +135,7 @@ export const translations = {
         title:
           "Белорусский Государственный Университет Информатики и Радиоэлектроники",
         badge: "Высшее",
-        speciality: "Специальость - Инженер-Системотехник (высшее)",
+        speciality: "Специальость: Инженер-Системотехник",
       },
       mtek: {
         title: "Молодечненский Тогово-Экономический Колледж",
