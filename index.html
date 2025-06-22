@@ -124,15 +124,28 @@
           <div class="hero__inner container">
             <div class="hero__body">
               <span id="auto_typing_text"></span>
-              <button
-                class="hero__button"
-                id="hero__button"
-                type="button"
-                href="#contacts"
-                i18n="hero.button"
-              >
-                Let's check!
-              </button>
+              <div class="hero__buttons">
+                <button
+                  class="hero__button"
+                  id="hero__button"
+                  type="button"
+                  href="#contacts"
+                  i18n="hero.button"
+                >
+                  Let's check!
+                </button>
+                <button class="hero__download" id="pdf-download">
+                  <span class="download-text">Download CV</span>
+                  <span class="download-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20">
+                      <path
+                        fill="currentColor"
+                        d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
             </div>
             <div class="hero__photo">
               <img
@@ -847,5 +860,6 @@
     <script type="module" src="./scripts/i18n.js"></script>
     <script src="./scripts/theme-toggle.js"></script>
     <script src="./scripts/scroll-to-top.js"></script>
+    <script src="./scripts/download-pdf.js"></script>
   </body>
 </html>

@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const cursor = document.querySelector(".typed-cursor");
       if (cursor) cursor.style.display = "none";
       document.getElementById("hero__button").classList.add("is-show");
+      document.getElementById("pdf-download").classList.add("is-show-pdf-b");
     },
   });
 });

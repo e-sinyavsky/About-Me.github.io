@@ -287,6 +287,10 @@ a {
   display: block !important;
 }
 
+.is-show-pdf-b {
+  display: flex !important;
+}
+
 .text-accent {
   color: var(--color-accent);
   font-weight: 600;
@@ -534,6 +538,15 @@ a[class] {
 .content__sections .hero__body #auto_typing_text {
   font-size: 2.125rem;
 }
+.content__sections .hero__buttons {
+  display: flex;
+  gap: 0.9375rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column;
+}
 .content__sections .hero__button {
   display: none;
   border-radius: 3.125rem;
@@ -543,11 +556,13 @@ a[class] {
   width: 15.625rem;
   font-size: 1rem;
   font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--color-black);
 }
 .content__sections .hero__button:hover {
   background-color: var(--color-accent);
   border: 0.0625rem solid var(--color-black);
-  font-weight: bold;
 }
 [data-theme=dark] .content__sections .hero__button {
   color: var(--color-light);
@@ -555,8 +570,53 @@ a[class] {
 [data-theme=dark] .content__sections .hero__button:hover {
   background-color: var(--color-accent);
   border: 0.0625rem solid var(--color-black);
-  font-weight: bold;
   color: var(--color-black);
+}
+.content__sections .hero__download {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 3.125rem;
+  border: 0.0625rem solid var(--color-accent);
+  background-color: transparent;
+  height: 3.75rem;
+  width: 15.625rem;
+  padding: 0 1.5625rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  color: var(--color-black);
+}
+.content__sections .hero__download:hover {
+  background-color: var(--color-accent);
+  border: 0.0625rem solid var(--color-black);
+}
+[data-theme=dark] .content__sections .hero__download {
+  color: var(--color-light);
+}
+[data-theme=dark] .content__sections .hero__download:hover {
+  background-color: var(--color-accent);
+  border: 0.0625rem solid var(--color-black);
+  color: var(--color-black);
+}
+.content__sections .hero__download:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.content__sections .hero__download .download-text {
+  transition: all 0.3s ease;
+}
+.content__sections .hero__download .download-icon {
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+.content__sections .hero__download .download-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 .content__sections .hero__photo {
   flex: 0 0 20rem;
@@ -602,6 +662,12 @@ a[class] {
     box-shadow: 0rem 0rem 2.5rem 1.25rem var(--color-accent);
     border: 0.0625rem solid var(--color-accent);
   }
+  .content__sections .hero__buttons {
+    flex-direction: column;
+  }
+  .content__sections .hero__button, .content__sections .hero__download {
+    width: 100%;
+  }
 }
 @media (width <= 47.99875rem) {
   .content__sections .hero__inner {
@@ -614,12 +680,25 @@ a[class] {
     order: -1;
     flex: 0 0 14.0625rem;
     width: 14.0625rem;
+    height: 14.0625rem;
   }
   .content__sections .hero__body {
     max-width: 100%;
   }
   .content__sections .hero__body #auto_typing_text {
     font-size: 1.5rem;
+  }
+  .content__sections .hero__button, .content__sections .hero__download {
+    height: 3.125rem;
+    font-size: 0.875rem;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 .content__sections .skills {
