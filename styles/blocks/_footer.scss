@@ -14,7 +14,7 @@
     margin-top: rem(40);
   }
 
-  &__init {
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,20 +35,20 @@
     flex: 1 0 rem(200);
 
     &-title {
-      font-size: 34px;
+      font-size: rem(34);
     }
 
     &-sub-title {
-      font-size: 14px;
+      font-size: rem(14);
     }
 
     @include laptop {
       &-title {
-        font-size: 28px;
+        font-size: rem(28);
       }
 
       &-subtitle {
-        font-size: 12px;
+        font-size: rem(12);
       }
     }
   }
@@ -86,7 +86,7 @@
   }
 
   @include mobile {
-    &__init {
+    &__inner {
       flex-direction: column;
       gap: rem(25);
       text-align: center;

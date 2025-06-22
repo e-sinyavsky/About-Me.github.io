@@ -9,12 +9,12 @@
   height: rem(80);
 
   &.scrolled {
-    box-shadow: 0px 1px 10px var(--color-black);
+    box-shadow: 0 rem(1) rem(10) var(--color-black);
   }
 
   &__settings {
     display: flex;
-    gap: 20px;
+    gap: rem(20);
     justify-content: space-between;
     align-items: center;
   }
@@ -66,7 +66,7 @@
     &-list {
       display: flex;
       flex-direction: row;
-      column-gap: rem(40);
+      column-gap: rem(24);
 
       @include mobile {
         flex-direction: column;
@@ -135,7 +135,7 @@
     }
 
     span {
-      height: 2px;
+      height: rem(2);
       width: 80%;
       transform: scale(1);
       background-color: var(--color-accent);

@@ -50,7 +50,7 @@
     .theme-toggle__thumb {
       transform: translate(3rem, -50%);
       background-color: var(--color-accent);
-      box-shadow: 20px 20px 20px rgba(248, 248, 248, 0.2);
+      box-shadow: rem(20) rem(20) rem(20) rgba(248, 248, 248, 0.2);
     }
   }
 }
