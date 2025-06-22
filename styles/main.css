@@ -846,16 +846,23 @@ a[class] {
 .content__sections .stack__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 .content__sections .stack__item {
+  border: 0.125rem solid var(--color-black);
+  border-radius: 3.125rem;
+  padding: 0.8125rem;
+  background-color: var(--color-accent);
   transition: transform 0.2s;
 }
 .content__sections .stack__item:hover {
   transform: translateY(-0.1875rem);
+}
+[data-theme=dark] .content__sections .stack__item {
+  border: 0.125rem solid;
 }
 .content__sections .stack__image {
   width: 2.25rem;

@@ -425,17 +425,25 @@
       &__list {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 0.5rem;
         list-style: none;
         padding: 0;
         margin: 0;
       }
 
       &__item {
+        border: rem(2) solid var(--color-black);
+        border-radius: rem(50);
+        padding: rem(13);
+        background-color: var(--color-accent);
         transition: transform 0.2s;
 
         &:hover {
           transform: translateY(rem(-3));
+        }
+
+        [data-theme="dark"] & {
+          border: rem(2) solid;
         }
       }
 
