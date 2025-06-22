@@ -7,7 +7,7 @@ document
       button.classList.add("loading");
       button.disabled = true;
 
-      const fileUrl = "../assets/cv.pdf";
+      const fileUrl = "/assets/cv.pdf";
       const fileName = "Egor_Sinyavsky_CV.pdf";
 
       const response = await fetch(fileUrl, { method: "HEAD" });
