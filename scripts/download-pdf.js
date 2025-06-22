@@ -2,39 +2,39 @@ document
   .getElementById("pdf-download")
   .addEventListener("click", async function () {
     const button = this;
-    const fileUrl = "assets/cv.pdf";
-    const fileName = "Egor_Sinyavsky_CV.pdf";
-
-    button.classList.add("loading");
-    button.disabled = true;
 
     try {
-      if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-        window.open(fileUrl, "_blank");
-      } else {
-        const response = await fetch(fileUrl);
-        const blob = await response.blob();
-        const url = window.URL.createObjectURL(blob);
+      button.classList.add("loading");
+      button.disabled = true;
 
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = fileName;
-        link.style.display = "none";
-        document.body.appendChild(link);
-        link.click();
+      const fileUrl = "assets/cv.pdf";
+      const fileName = "Egor_Sinyavsky_CV.pdf";
 
-        setTimeout(() => {
-          document.body.removeChild(link);
-          window.URL.revokeObjectURL(url);
-        }, 100);
+      const response = await fetch(fileUrl, { method: "HEAD" });
+
+      if (!response.ok) {
+        throw new Error("File not available");
       }
+
+      const link = document.createElement("a");
+      link.href = fileUrl;
+      link.download = fileName;
+      link.style.display = "none";
+      document.body.appendChild(link);
+
+      await new Promise((resolve) => requestAnimationFrame(resolve));
+
+      link.click();
+
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      document.body.removeChild(link);
     } catch (error) {
-      console.error("Download error:", error);
-      window.open(fileUrl, "_blank");
+      console.error("Download failed:", error);
+      alert(
+        "Sorry, the CV download is currently unavailable. Please try again later."
+      );
     } finally {
-      setTimeout(() => {
-        button.classList.remove("loading");
-        button.disabled = false;
-      }, 3000);
+      button.classList.remove("loading");
+      button.disabled = false;
     }
   });
