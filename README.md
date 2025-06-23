@@ -3,12 +3,6 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-brightgreen?style=for-the-badge&logo=github)](https://e-sinyavsky.github.io/About-Me.github.io/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
-<div align="center">
-  <img src="https://github.com/user-attachments/files/20852503/Egor.Sinyavsky._.Fullstack.Developer.pdf" alt="Предпросмотр сайта" width="80%"/>
-  <p><em></em></p>
-</div>
-
-
 ## ✨ Особенности
 
 - **Современный дизайн** с анимациями и плавными переходами
