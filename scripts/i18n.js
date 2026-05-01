@@ -1,4 +1,4 @@
-import { translations } from "../locales/translation.js?v=10";
+import { translations } from "../locales/translation.js?v=11";
 
 const STORAGE_KEY = "language";
 const DEFAULT_LANG = "en";

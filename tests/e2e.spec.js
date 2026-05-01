@@ -168,6 +168,45 @@ test.describe("news page", () => {
     await page.locator('a[href="news.html"]').first().click();
     await expect(page).toHaveURL(/news\.html$/);
   });
+
+  test("nav link from news to index.html#skills lands on skills section", async ({
+    page,
+  }) => {
+    await page.goto("/news.html");
+    const burger = page.locator(".header__burger");
+    if (await burger.isVisible()) {
+      await burger.click();
+    }
+    await page.locator('a[href="index.html#skills"]').first().click();
+    await expect(page).toHaveURL(/index\.html#skills$/);
+
+    // Allow on-load hash scroll to settle
+    await page.waitForLoadState("load");
+    await page.waitForTimeout(400);
+
+    const skillsTop = await page
+      .locator("#skills")
+      .evaluate((el) => el.getBoundingClientRect().top);
+    const headerH = await page
+      .locator(".header")
+      .evaluate((el) => el.offsetHeight);
+
+    // Skills should land near the top of the viewport, below the header.
+    // Tolerance accounts for fluid scroll-margin-top (clamp 80-120px) vs the
+    // smaller mobile header.
+    expect(skillsTop).toBeGreaterThan(0);
+    expect(skillsTop).toBeLessThan(headerH + 80);
+  });
+
+  test("Education link visible in news.html nav", async ({ page }) => {
+    await page.goto("/news.html");
+    const burger = page.locator(".header__burger");
+    if (await burger.isVisible()) {
+      await burger.click();
+    }
+    const edu = page.locator('a[href="index.html#education"]');
+    await expect(edu).toBeVisible();
+  });
 });
 
 test.describe("metadata", () => {

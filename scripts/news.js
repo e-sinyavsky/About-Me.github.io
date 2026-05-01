@@ -4,7 +4,7 @@
   const errorEl = document.getElementById("news-error");
   if (!list) return;
 
-  const POSTS_URL = "news/posts.json?v=10";
+  const POSTS_URL = "news/posts.json?v=11";
   let postsCache = null;
 
   function lang() {

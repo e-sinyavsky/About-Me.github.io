@@ -14,6 +14,15 @@ main {
   flex: 1;
 }
 
+/**
+  Compensate for the sticky header when the browser scrolls to a hash target.
+  Acts as a CSS fallback if JS fails to apply the header-aware offset.
+ */
+.section,
+:target {
+  scroll-margin-top: clamp(rem(80), 12vh, rem(120));
+}
+
 a {
   text-decoration: none;
 }
