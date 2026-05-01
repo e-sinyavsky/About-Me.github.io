@@ -1,27 +1,26 @@
-# Обо Мне - Персональная Страница 👋
+# About Me — Personal Page 👋
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-brightgreen?style=for-the-badge&logo=github)](https://e-sinyavsky.github.io/About-Me.github.io/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
-## ✨ Особенности
+## ✨ Features
 
-- **Современный дизайн** с анимациями и плавными переходами
-- **Полностью адаптивная** верстка под все устройства
-- **Интерактивное портфолио** с проектами и навыками
+- **Modern design** with smooth animations and transitions
+- **Fully responsive** layout for all devices
+- **Light / dark theme** with system-preference detection
+- **Bilingual UI** (English / Russian) with persistent selection
+- **Optimized** performance and accessibility (semantic HTML, ARIA, skip-link)
 
-- **Простая навигация** по разделам
-- **Оптимизированная** производительность
-
-## 🛠️ Технологии
+## 🛠️ Tech Stack
 
 <div align="center">
-  <a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank">
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
   </a>
   <a href="https://sass-lang.com/" target="_blank">
     <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass">
   </a>
-  <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript" target="_blank">
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
   </a>
   <a href="https://pages.github.com/" target="_blank">
@@ -29,61 +28,75 @@
   </a>
 </div>
 
-## 🚀 Быстрый Старт
+## 🚀 Quick Start
 
-Чтобы запустить проект локально:
+To run the project locally:
 
 ```bash
-# Клонировать репозиторий
+# Clone the repository
 git clone https://github.com/e-sinyavsky/About-Me.github.io.git
 
-# Перейти в директорию проекта
+# Enter the project directory
 cd About-Me.github.io
 
-# Открыть в браузере (для Windows)
-start index.html
+# Install dependencies
+npm install
+
+# Compile SCSS in watch mode
+npm run sass-watch
+
+# Open index.html in your browser
+start index.html      # Windows
+open  index.html      # macOS
+xdg-open index.html   # Linux
 ```
 
-## 📂 Структура Проекта
+## 📂 Project Structure
 
 ```
 About-Me.github.io/
-├── fonts            # Шрифты
-├── icons            # Иконки
-├── images           # Изображения
-├── locales          # Локали
-├── scripts          # Скрипты
-├── styles           # Стили
-│   ├── blocks/      # Блоки
-│   ├── helpers/     # Спомогательные SASS функции,миксины
-├── index.html       # Главная страница
-├── LICENSE          # Лицензия
-└── README.md        # Этот файл
+├── assets           # Static assets (CV, etc.)
+├── fonts            # Web fonts
+├── icons            # SVG icons
+├── images           # Images
+├── locales          # i18n translations
+├── scripts          # JavaScript modules
+├── styles           # Stylesheets
+│   ├── blocks/      # BEM blocks
+│   └── helpers/     # Helper SASS functions and mixins
+├── index.html       # Main page
+├── LICENSE          # License
+└── README.md        # This file
 ```
 
-## 🔗 Полезные Ссылки
+## 🔗 Links
 
-- [Живая демонстрация](https://e-sinyavsky.github.io/About-Me.github.io/)
-- [Мой GitHub профиль](https://github.com/e-sinyavsky)
-- [История изменений](https://github.com/e-sinyavsky/About-Me.github.io/commits/main)
+- [Live demo](https://e-sinyavsky.github.io/About-Me.github.io/)
+- [My GitHub profile](https://github.com/e-sinyavsky)
+- [Change history](https://github.com/e-sinyavsky/About-Me.github.io/commits/main)
 
-## 📄 Лицензия
+## 📄 License
 
-Этот проект распространяется под лицензией MIT. Подробнее см. в файле [LICENSE](LICENSE).
+This project is distributed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
 <div align="center">
-  <h3>Связаться со мной</h3>
+  <h3>Get in touch</h3>
   <p>
     <a href="https://github.com/e-sinyavsky">
       <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
     </a>
-    <!-- Добавьте другие контакты при необходимости -->
+    <a href="https://www.linkedin.com/in/egor-sinyavsky-30b779212/">
+      <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    </a>
+    <a href="https://t.me/egor_sinyavsky">
+      <img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
+    </a>
   </p>
-  <p>© 2025 Синявский Егор | Персональная страница</p>
+  <p>© 2026 Egor Sinyavsky | Personal Page</p>
 </div>
 
 ---
 
-⭐ Если вам нравится проект, поставьте звезду на GitHub! Это мотивирует на дальнейшее развитие.
+⭐ If you like the project, consider giving it a star on GitHub!

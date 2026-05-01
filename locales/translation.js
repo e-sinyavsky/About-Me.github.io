@@ -59,12 +59,12 @@ export const translations = {
       bguir: {
         title:
           "Belarusian State University of Informatics and Radioelectronics",
-        badge: "Secondary-Special",
-        speciality: "Speciality - Systems Engineer",
+        badge: "Higher",
+        speciality: "Speciality: Systems Engineer",
       },
       mtek: {
         title: "Molodechno Trade and Economic College",
-        badge: "Higher",
+        badge: "Secondary-Special",
         speciality: "Speciality: Technician Programmer",
       },
     },
@@ -96,7 +96,7 @@ export const translations = {
       frontend: "ФРОНТЕНД",
       backend: "БЭКЕНД",
       other: "ДРУГОЕ",
-      english: "Уровень английкого - A2",
+      english: "Уровень английского - A2",
       soft_skills: {
         a: "Умею работать в команде, имею опыт общения с дизайнерами, менеджерами и другими разработчиками",
         b: "Я ответственно отношусь к срокам",
@@ -135,12 +135,12 @@ export const translations = {
         title:
           "Белорусский Государственный Университет Информатики и Радиоэлектроники",
         badge: "Высшее",
-        speciality: "Специальость: Инженер-Системотехник",
+        speciality: "Специальность: Инженер-системотехник",
       },
       mtek: {
-        title: "Молодечненский Тогово-Экономический Колледж",
-        badge: "Средне-Специальное",
-        speciality: "Специальность - Техник-Программист",
+        title: "Молодечненский Торгово-Экономический Колледж",
+        badge: "Средне-специальное",
+        speciality: "Специальность: Техник-программист",
       },
     },
     footer: {

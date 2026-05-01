@@ -1,8 +1,8 @@
-document
-  .getElementById("pdf-download")
-  .addEventListener("click", async function () {
-    const button = this;
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("pdf-download");
+  if (!button) return;
 
+  button.addEventListener("click", async () => {
     try {
       button.classList.add("loading");
       button.disabled = true;
@@ -11,7 +11,6 @@ document
       const fileName = "Egor_Sinyavsky_CV.pdf";
 
       const response = await fetch(fileUrl, { method: "HEAD" });
-
       if (!response.ok) {
         throw new Error("File not available");
       }
@@ -19,15 +18,11 @@ document
       const link = document.createElement("a");
       link.href = fileUrl;
       link.download = fileName;
+      link.rel = "noopener";
       link.style.display = "none";
       document.body.appendChild(link);
-
-      await new Promise((resolve) => requestAnimationFrame(resolve));
-
       link.click();
-
-      await new Promise((resolve) => setTimeout(resolve, 3000));
-      document.body.removeChild(link);
+      link.remove();
     } catch (error) {
       console.error("Download failed:", error);
       alert(
@@ -38,3 +33,4 @@ document
       button.disabled = false;
     }
   });
+});

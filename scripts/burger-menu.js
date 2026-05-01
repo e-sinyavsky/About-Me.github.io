@@ -3,31 +3,38 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".header__menu");
   const body = document.body;
 
+  if (!burger || !menu) return;
+
+  function setOpen(open) {
+    burger.classList.toggle("active", open);
+    menu.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", String(open));
+    body.style.overflow = open ? "hidden" : "auto";
+  }
+
   function closeMenu() {
-    burger.classList.remove("active");
-    menu.classList.remove("open");
-    body.style.overflow = "auto";
+    setOpen(false);
   }
 
   burger.addEventListener("click", function () {
-    this.classList.toggle("active");
-    menu.classList.toggle("open");
-
-    if (menu.classList.contains("open")) {
-      body.style.overflow = "hidden";
-    } else {
-      closeMenu();
-    }
+    const isOpen = !menu.classList.contains("open");
+    setOpen(isOpen);
   });
 
-  const menuItems = document.querySelectorAll(".header__menu a");
-  menuItems.forEach((item) => {
+  document.querySelectorAll(".header__menu a").forEach((item) => {
     item.addEventListener("click", closeMenu);
   });
 
   document.addEventListener("click", function (e) {
     if (!menu.contains(e.target) && !burger.contains(e.target)) {
       closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && menu.classList.contains("open")) {
+      closeMenu();
+      burger.focus();
     }
   });
 });

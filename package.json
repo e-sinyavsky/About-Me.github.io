@@ -1,15 +1,15 @@
 {
   "name": "about-me",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.1.0",
+  "description": "Personal portfolio of Egor Sinyavsky — Fullstack Developer.",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-watch": "sass --watch ."
+    "build": "sass styles/main.scss styles/main.css --style=compressed --no-source-map",
+    "build:dev": "sass styles/main.scss styles/main.css",
+    "sass-watch": "sass --watch styles/main.scss:styles/main.css"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Egor Sinyavsky",
+  "license": "MIT",
   "dependencies": {
     "sass": "^1.89.2",
     "typed.js": "^2.1.0"
