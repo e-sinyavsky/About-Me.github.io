@@ -52,19 +52,19 @@
       rel="canonical"
       href="https://e-sinyavsky.github.io/About-Me.github.io/"
     />
-    <link rel="icon" href="icons/logo.svg?v=4" type="image/svg+xml" />
+    <link rel="icon" href="icons/logo.svg?v=5" type="image/svg+xml" />
 
     <title>Egor Sinyavsky | Fullstack Developer</title>
 
     <link
       rel="preload"
       as="image"
-      href="images/me-800.webp?v=4"
-      imagesrcset="images/me-400.webp?v=4 400w, images/me-800.webp?v=4 800w"
+      href="images/me-800.webp?v=5"
+      imagesrcset="images/me-400.webp?v=5 400w, images/me-800.webp?v=5 800w"
       imagesizes="(max-width: 768px) 80vw, 400px"
       type="image/webp"
     />
-    <link rel="stylesheet" href="./styles/main.css?v=4" />
+    <link rel="stylesheet" href="./styles/main.css?v=5" />
 
     <script>
       // Prevent FOUC: apply theme before first paint.
@@ -126,7 +126,7 @@
     <header class="header">
       <div class="header__inner container">
         <div class="header__logo">
-          <a href="/" class="header__logo-link" aria-label="Home">
+          <a href="#about" class="header__logo-link" aria-label="Back to top">
             <svg
               class="logo"
               xmlns="http://www.w3.org/2000/svg"
@@ -197,41 +197,142 @@
             <div class="language-selector">
               <button
                 class="language-selector__toggle"
+                type="button"
+                aria-haspopup="listbox"
                 aria-expanded="false"
                 aria-label="Select language"
               >
+                <svg
+                  class="language-selector__globe"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                </svg>
                 <span class="language-selector__current">EN</span>
                 <svg
-                  class="language-selector__icon"
-                  width="12"
-                  height="8"
+                  class="language-selector__chevron"
                   viewBox="0 0 12 8"
+                  width="10"
+                  height="6"
+                  aria-hidden="true"
                 >
                   <path
-                    d="M1 1L6 7L11 1"
+                    d="M1 1.5L6 6.5L11 1.5"
                     stroke="currentColor"
-                    stroke-width="0"
+                    stroke-width="1.8"
                     stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
                   />
                 </svg>
               </button>
-              <div class="language-selector__dropdown">
-                <button class="language-selector__option active" data-lang="en">
-                  English
-                </button>
-                <button class="language-selector__option" data-lang="ru">
-                  Русский
-                </button>
-              </div>
+              <ul class="language-selector__dropdown" role="listbox">
+                <li role="presentation">
+                  <button
+                    class="language-selector__option active"
+                    type="button"
+                    role="option"
+                    aria-selected="true"
+                    data-lang="en"
+                  >
+                    <span class="language-selector__option-code">EN</span>
+                    <span class="language-selector__option-name">English</span>
+                    <svg
+                      class="language-selector__check"
+                      viewBox="0 0 16 16"
+                      width="14"
+                      height="14"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 8.5l3.5 3.5L13 5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill="none"
+                      />
+                    </svg>
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button
+                    class="language-selector__option"
+                    type="button"
+                    role="option"
+                    aria-selected="false"
+                    data-lang="ru"
+                  >
+                    <span class="language-selector__option-code">RU</span>
+                    <span class="language-selector__option-name">Русский</span>
+                    <svg
+                      class="language-selector__check"
+                      viewBox="0 0 16 16"
+                      width="14"
+                      height="14"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 8.5l3.5 3.5L13 5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill="none"
+                      />
+                    </svg>
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="settings__theme-switcher">
             <button
               class="theme-toggle"
               id="themeToggle"
+              type="button"
               aria-label="Toggle theme"
+              title="Toggle theme"
             >
-              <span class="theme-toggle__thumb"></span>
+              <svg
+                class="theme-toggle__icon theme-toggle__icon--sun"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                />
+              </svg>
+              <svg
+                class="theme-toggle__icon theme-toggle__icon--moon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                />
+              </svg>
+              <span class="theme-toggle__thumb" aria-hidden="true"></span>
             </button>
           </div>
         </div>
@@ -290,21 +391,21 @@
                 <source
                   type="image/webp"
                   srcset="
-                    images/me-400.webp?v=4 400w,
-                    images/me-800.webp?v=4 800w
+                    images/me-400.webp?v=5 400w,
+                    images/me-800.webp?v=5 800w
                   "
                   sizes="(max-width: 768px) 80vw, 400px"
                 />
                 <source
                   type="image/jpeg"
                   srcset="
-                    images/me-400.jpg?v=4 400w,
-                    images/me-800.jpg?v=4 800w
+                    images/me-400.jpg?v=5 400w,
+                    images/me-800.jpg?v=5 800w
                   "
                   sizes="(max-width: 768px) 80vw, 400px"
                 />
                 <img
-                  src="images/me-800.jpg?v=4"
+                  src="images/me-800.jpg?v=5"
                   alt="Egor Sinyavsky - Fullstack Developer"
                   width="800"
                   height="1202"
@@ -554,7 +655,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/django.svg?v=4"
+                      src="icons/django.svg?v=5"
                       alt="Django"
                       title="Django"
                       width="36"
@@ -565,7 +666,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/react.svg?v=4"
+                      src="icons/react.svg?v=5"
                       alt="React"
                       title="React"
                       width="36"
@@ -576,7 +677,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/typescript.svg?v=4"
+                      src="icons/typescript.svg?v=5"
                       alt="TypeScript"
                       title="TypeScript"
                       width="36"
@@ -587,7 +688,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/docker.svg?v=4"
+                      src="icons/docker.svg?v=5"
                       alt="Docker"
                       title="Docker"
                       width="36"
@@ -598,7 +699,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/redux.svg?v=4"
+                      src="icons/redux.svg?v=5"
                       alt="Redux"
                       title="Redux"
                       width="36"
@@ -609,7 +710,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/html.svg?v=4"
+                      src="icons/html.svg?v=5"
                       alt="HTML"
                       title="HTML"
                       width="36"
@@ -620,7 +721,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/css.svg?v=4"
+                      src="icons/css.svg?v=5"
                       alt="CSS"
                       title="CSS"
                       width="36"
@@ -631,7 +732,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/kubernetes.svg?v=4"
+                      src="icons/kubernetes.svg?v=5"
                       alt="Kubernetes"
                       title="Kubernetes"
                       width="36"
@@ -642,7 +743,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/postgresql.svg?v=4"
+                      src="icons/postgresql.svg?v=5"
                       alt="PostgreSQL"
                       title="PostgreSQL"
                       width="36"
@@ -695,7 +796,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/python.svg?v=4"
+                      src="icons/python.svg?v=5"
                       alt="Python"
                       title="Python"
                       width="36"
@@ -706,7 +807,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/flask.svg?v=4"
+                      src="icons/flask.svg?v=5"
                       alt="Flask"
                       title="Flask"
                       width="36"
@@ -717,7 +818,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/typescript.svg?v=4"
+                      src="icons/typescript.svg?v=5"
                       alt="TypeScript"
                       title="TypeScript"
                       width="36"
@@ -728,7 +829,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/angular.svg?v=4"
+                      src="icons/angular.svg?v=5"
                       alt="Angular"
                       title="Angular"
                       width="36"
@@ -739,7 +840,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/html.svg?v=4"
+                      src="icons/html.svg?v=5"
                       alt="HTML"
                       title="HTML"
                       width="36"
@@ -750,7 +851,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/css.svg?v=4"
+                      src="icons/css.svg?v=5"
                       alt="CSS"
                       title="CSS"
                       width="36"
@@ -761,7 +862,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/docker.svg?v=4"
+                      src="icons/docker.svg?v=5"
                       alt="Docker"
                       title="Docker"
                       width="36"
@@ -826,7 +927,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/ruby.svg?v=4"
+                      src="icons/ruby.svg?v=5"
                       alt="Ruby"
                       title="Ruby"
                       width="36"
@@ -837,7 +938,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/rails.svg?v=4"
+                      src="icons/rails.svg?v=5"
                       alt="Ruby on Rails"
                       title="Ruby on Rails"
                       width="36"
@@ -848,7 +949,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/javascript.svg?v=4"
+                      src="icons/javascript.svg?v=5"
                       alt="JavaScript"
                       title="JavaScript"
                       width="36"
@@ -859,7 +960,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/react.svg?v=4"
+                      src="icons/react.svg?v=5"
                       alt="React"
                       title="React"
                       width="36"
@@ -870,7 +971,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/html.svg?v=4"
+                      src="icons/html.svg?v=5"
                       alt="HTML"
                       title="HTML"
                       width="36"
@@ -881,7 +982,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/css.svg?v=4"
+                      src="icons/css.svg?v=5"
                       alt="CSS"
                       title="CSS"
                       width="36"
@@ -892,7 +993,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/docker.svg?v=4"
+                      src="icons/docker.svg?v=5"
                       alt="Docker"
                       title="Docker"
                       width="36"
@@ -1081,15 +1182,15 @@
       referrerpolicy="no-referrer"
       defer
     ></script>
-    <script src="./scripts/anchor-links.js?v=4" defer></script>
-    <script src="./scripts/type-text.js?v=4" defer></script>
-    <script src="./scripts/header-scroll-effect.js?v=4" defer></script>
-    <script src="./scripts/burger-menu.js?v=4" defer></script>
-    <script type="module" src="./scripts/i18n.js?v=4"></script>
-    <script src="./scripts/theme-toggle.js?v=4" defer></script>
-    <script src="./scripts/scroll-to-top.js?v=4" defer></script>
-    <script src="./scripts/download-pdf.js?v=4" defer></script>
-    <script src="./scripts/projects.js?v=4" defer></script>
-    <script src="./scripts/scroll-animations.js?v=4" defer></script>
+    <script src="./scripts/anchor-links.js?v=5" defer></script>
+    <script src="./scripts/type-text.js?v=5" defer></script>
+    <script src="./scripts/header-scroll-effect.js?v=5" defer></script>
+    <script src="./scripts/burger-menu.js?v=5" defer></script>
+    <script type="module" src="./scripts/i18n.js?v=5"></script>
+    <script src="./scripts/theme-toggle.js?v=5" defer></script>
+    <script src="./scripts/scroll-to-top.js?v=5" defer></script>
+    <script src="./scripts/download-pdf.js?v=5" defer></script>
+    <script src="./scripts/projects.js?v=5" defer></script>
+    <script src="./scripts/scroll-animations.js?v=5" defer></script>
   </body>
 </html>

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>404 — Page not found | Egor Sinyavsky</title>
-    <link rel="icon" href="icons/logo.svg?v=4" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles/main.css?v=4" />
+    <link rel="icon" href="icons/logo.svg?v=5" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/main.css?v=5" />
     <script>
       (function () {
         try {
@@ -80,9 +80,19 @@
         The page you were looking for doesn't exist. It may have been moved or
         the URL might be mistyped.
       </p>
-      <a class="page-404__cta" href="/About-Me.github.io/">
+      <a class="page-404__cta" id="back-home" href="/About-Me.github.io/">
         ← Back to home
       </a>
     </main>
+    <script>
+      // Compute the GitHub Pages project base path so the link works
+      // both at e-sinyavsky.github.io/About-Me.github.io/ and at root.
+      (function () {
+        var link = document.getElementById("back-home");
+        if (!link) return;
+        var parts = location.pathname.split("/").filter(Boolean);
+        link.href = parts.length ? "/" + parts[0] + "/" : "/";
+      })();
+    </script>
   </body>
 </html>

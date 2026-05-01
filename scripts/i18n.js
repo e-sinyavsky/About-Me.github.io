@@ -1,4 +1,4 @@
-import { translations } from "../locales/translation.js";
+import { translations } from "../locales/translation.js?v=5";
 
 const STORAGE_KEY = "language";
 const DEFAULT_LANG = "en";
@@ -93,7 +93,9 @@ function syncLanguageUI(lang) {
   if (current) current.textContent = lang.toUpperCase();
 
   document.querySelectorAll(".language-selector__option").forEach((opt) => {
-    opt.classList.toggle("active", opt.dataset.lang === lang);
+    const isActive = opt.dataset.lang === lang;
+    opt.classList.toggle("active", isActive);
+    opt.setAttribute("aria-selected", String(isActive));
   });
 }
 

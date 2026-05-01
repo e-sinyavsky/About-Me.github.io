@@ -12,8 +12,12 @@
   --color-light-gray: #ccc;
 
   --container-width: #{rem(1100)};
-  --container-padding-x: #{rem(16)};
+  --container-padding-x: clamp(#{rem(16)}, 4vw, #{rem(40)});
   --transition-duration: 0.2s;
+
+  --section-padding-y: clamp(#{rem(48)}, 10vw, #{rem(160)});
+  --hero-title-size: clamp(#{rem(20)}, 4vw, #{rem(34)});
+  --section-title-size: clamp(#{rem(22)}, 3vw, #{rem(36)});
 }
 
 [data-theme="dark"] {
