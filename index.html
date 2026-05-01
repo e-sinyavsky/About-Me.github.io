@@ -52,12 +52,19 @@
       rel="canonical"
       href="https://e-sinyavsky.github.io/About-Me.github.io/"
     />
-    <link rel="icon" href="icons/logo.svg?v=3" type="image/svg+xml" />
+    <link rel="icon" href="icons/logo.svg?v=4" type="image/svg+xml" />
 
     <title>Egor Sinyavsky | Fullstack Developer</title>
 
-    <link rel="preload" as="image" href="images/me.jpg?v=3" />
-    <link rel="stylesheet" href="./styles/main.css?v=3" />
+    <link
+      rel="preload"
+      as="image"
+      href="images/me-800.webp?v=4"
+      imagesrcset="images/me-400.webp?v=4 400w, images/me-800.webp?v=4 800w"
+      imagesizes="(max-width: 768px) 80vw, 400px"
+      type="image/webp"
+    />
+    <link rel="stylesheet" href="./styles/main.css?v=4" />
 
     <script>
       // Prevent FOUC: apply theme before first paint.
@@ -169,6 +176,14 @@
             </li>
             <li class="header__menu-item">
               <a
+                href="#projects"
+                class="header__menu-link"
+                i18n="header.nav.projects"
+                >Projects</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a
                 href="#contacts"
                 class="header__menu-link"
                 i18n="header.nav.contacts"
@@ -271,14 +286,32 @@
               </div>
             </div>
             <div class="hero__photo">
-              <img
-                src="images/me.jpg?v=3"
-                alt="Egor Sinyavsky - Fullstack Developer"
-                width="400"
-                height="400"
-                fetchpriority="high"
-                decoding="async"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    images/me-400.webp?v=4 400w,
+                    images/me-800.webp?v=4 800w
+                  "
+                  sizes="(max-width: 768px) 80vw, 400px"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    images/me-400.jpg?v=4 400w,
+                    images/me-800.jpg?v=4 800w
+                  "
+                  sizes="(max-width: 768px) 80vw, 400px"
+                />
+                <img
+                  src="images/me-800.jpg?v=4"
+                  alt="Egor Sinyavsky - Fullstack Developer"
+                  width="800"
+                  height="1202"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
         </section>
@@ -521,7 +554,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/django.svg?v=3"
+                      src="icons/django.svg?v=4"
                       alt="Django"
                       title="Django"
                       width="36"
@@ -532,7 +565,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/react.svg?v=3"
+                      src="icons/react.svg?v=4"
                       alt="React"
                       title="React"
                       width="36"
@@ -543,7 +576,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/typescript.svg?v=3"
+                      src="icons/typescript.svg?v=4"
                       alt="TypeScript"
                       title="TypeScript"
                       width="36"
@@ -554,7 +587,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/docker.svg?v=3"
+                      src="icons/docker.svg?v=4"
                       alt="Docker"
                       title="Docker"
                       width="36"
@@ -565,7 +598,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/redux.svg?v=3"
+                      src="icons/redux.svg?v=4"
                       alt="Redux"
                       title="Redux"
                       width="36"
@@ -576,7 +609,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/html.svg?v=3"
+                      src="icons/html.svg?v=4"
                       alt="HTML"
                       title="HTML"
                       width="36"
@@ -587,7 +620,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/css.svg?v=3"
+                      src="icons/css.svg?v=4"
                       alt="CSS"
                       title="CSS"
                       width="36"
@@ -598,7 +631,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/kubernetes.svg?v=3"
+                      src="icons/kubernetes.svg?v=4"
                       alt="Kubernetes"
                       title="Kubernetes"
                       width="36"
@@ -609,7 +642,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/postgresql.svg?v=3"
+                      src="icons/postgresql.svg?v=4"
                       alt="PostgreSQL"
                       title="PostgreSQL"
                       width="36"
@@ -639,8 +672,7 @@
                 Fullstack Developer
               </div>
               <div class="work-experience-card__project">
-                Project -
-                <a href="#">Vibrant</a>
+                Project - <span>Vibrant</span>
               </div>
               <div class="work-experience-card__description">
                 <ul>
@@ -663,7 +695,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/python.svg?v=3"
+                      src="icons/python.svg?v=4"
                       alt="Python"
                       title="Python"
                       width="36"
@@ -674,7 +706,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/flask.svg?v=3"
+                      src="icons/flask.svg?v=4"
                       alt="Flask"
                       title="Flask"
                       width="36"
@@ -685,7 +717,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/typescript.svg?v=3"
+                      src="icons/typescript.svg?v=4"
                       alt="TypeScript"
                       title="TypeScript"
                       width="36"
@@ -696,7 +728,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/angular.svg?v=3"
+                      src="icons/angular.svg?v=4"
                       alt="Angular"
                       title="Angular"
                       width="36"
@@ -707,7 +739,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/html.svg?v=3"
+                      src="icons/html.svg?v=4"
                       alt="HTML"
                       title="HTML"
                       width="36"
@@ -718,7 +750,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/css.svg?v=3"
+                      src="icons/css.svg?v=4"
                       alt="CSS"
                       title="CSS"
                       width="36"
@@ -729,7 +761,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/docker.svg?v=3"
+                      src="icons/docker.svg?v=4"
                       alt="Docker"
                       title="Docker"
                       width="36"
@@ -794,7 +826,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/ruby.svg?v=3"
+                      src="icons/ruby.svg?v=4"
                       alt="Ruby"
                       title="Ruby"
                       width="36"
@@ -805,7 +837,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/rails.svg?v=3"
+                      src="icons/rails.svg?v=4"
                       alt="Ruby on Rails"
                       title="Ruby on Rails"
                       width="36"
@@ -816,7 +848,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/javascript.svg?v=3"
+                      src="icons/javascript.svg?v=4"
                       alt="JavaScript"
                       title="JavaScript"
                       width="36"
@@ -827,7 +859,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/react.svg?v=3"
+                      src="icons/react.svg?v=4"
                       alt="React"
                       title="React"
                       width="36"
@@ -838,7 +870,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/html.svg?v=3"
+                      src="icons/html.svg?v=4"
                       alt="HTML"
                       title="HTML"
                       width="36"
@@ -849,7 +881,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/css.svg?v=3"
+                      src="icons/css.svg?v=4"
                       alt="CSS"
                       title="CSS"
                       width="36"
@@ -860,7 +892,7 @@
                   <li class="stack__item">
                     <img
                       class="stack__image"
-                      src="icons/docker.svg?v=3"
+                      src="icons/docker.svg?v=4"
                       alt="Docker"
                       title="Docker"
                       width="36"
@@ -871,6 +903,69 @@
                 </ul>
               </div>
             </article>
+          </div>
+        </section>
+
+        <section
+          class="projects section"
+          id="projects"
+          aria-labelledby="projects-heading"
+          data-github-user="e-sinyavsky"
+          data-github-limit="6"
+        >
+          <div class="projects__inner container">
+            <h2
+              id="projects-heading"
+              class="projects__title"
+              i18n="projects.title"
+            >
+              Featured <span class="text-accent">Projects</span>
+            </h2>
+            <p class="projects__subtitle" i18n="projects.subtitle">
+              A live snapshot of my recent public repositories on GitHub.
+            </p>
+
+            <div
+              class="projects__grid"
+              id="projects-grid"
+              role="list"
+              aria-busy="true"
+            >
+              <div class="projects__skeleton" aria-hidden="true"></div>
+              <div class="projects__skeleton" aria-hidden="true"></div>
+              <div class="projects__skeleton" aria-hidden="true"></div>
+            </div>
+
+            <p
+              class="projects__error"
+              id="projects-error"
+              hidden
+              i18n="projects.error"
+            >
+              Couldn't reach GitHub right now. Open my profile directly →
+            </p>
+
+            <div class="projects__cta">
+              <a
+                class="projects__cta-link"
+                href="https://github.com/e-sinyavsky"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span i18n="projects.cta">View all on GitHub</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </section>
       </div>
@@ -986,13 +1081,15 @@
       referrerpolicy="no-referrer"
       defer
     ></script>
-    <script src="./scripts/anchor-links.js?v=3" defer></script>
-    <script src="./scripts/type-text.js?v=3" defer></script>
-    <script src="./scripts/header-scroll-effect.js?v=3" defer></script>
-    <script src="./scripts/burger-menu.js?v=3" defer></script>
-    <script type="module" src="./scripts/i18n.js?v=3"></script>
-    <script src="./scripts/theme-toggle.js?v=3" defer></script>
-    <script src="./scripts/scroll-to-top.js?v=3" defer></script>
-    <script src="./scripts/download-pdf.js?v=3" defer></script>
+    <script src="./scripts/anchor-links.js?v=4" defer></script>
+    <script src="./scripts/type-text.js?v=4" defer></script>
+    <script src="./scripts/header-scroll-effect.js?v=4" defer></script>
+    <script src="./scripts/burger-menu.js?v=4" defer></script>
+    <script type="module" src="./scripts/i18n.js?v=4"></script>
+    <script src="./scripts/theme-toggle.js?v=4" defer></script>
+    <script src="./scripts/scroll-to-top.js?v=4" defer></script>
+    <script src="./scripts/download-pdf.js?v=4" defer></script>
+    <script src="./scripts/projects.js?v=4" defer></script>
+    <script src="./scripts/scroll-animations.js?v=4" defer></script>
   </body>
 </html>

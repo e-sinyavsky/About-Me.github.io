@@ -9,7 +9,13 @@ const I18N_BINDINGS = [
   { selector: '[i18n="header.nav.skills"]', path: ["header", "nav", "skills"] },
   { selector: '[i18n="header.nav.education"]', path: ["header", "nav", "education"] },
   { selector: '[i18n="header.nav.experience"]', path: ["header", "nav", "experience"] },
+  { selector: '[i18n="header.nav.projects"]', path: ["header", "nav", "projects"] },
   { selector: '[i18n="header.nav.contacts"]', path: ["header", "nav", "contacts"] },
+
+  { selector: '[i18n="projects.title"]', path: ["projects", "title"], html: true },
+  { selector: '[i18n="projects.subtitle"]', path: ["projects", "subtitle"] },
+  { selector: '[i18n="projects.cta"]', path: ["projects", "cta"] },
+  { selector: '[i18n="projects.error"]', path: ["projects", "error"] },
 
   { selector: '[i18n="hero.button"]', path: ["hero", "button"] },
   { selector: '[i18n="hero.pdf_button"]', path: ["hero", "pdf_button"] },

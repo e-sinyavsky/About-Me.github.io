@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>404 — Page not found | Egor Sinyavsky</title>
+    <link rel="icon" href="icons/logo.svg?v=4" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/main.css?v=4" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var prefersDark = window.matchMedia
+            ? window.matchMedia("(prefers-color-scheme: dark)").matches
+            : false;
+          document.documentElement.setAttribute(
+            "data-theme",
+            stored || (prefersDark ? "dark" : "light")
+          );
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+    <style>
+      .page-404 {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        text-align: center;
+        gap: 1rem;
+      }
+      .page-404__code {
+        font-size: clamp(5rem, 18vw, 10rem);
+        font-weight: 800;
+        line-height: 1;
+        color: var(--color-accent);
+        margin: 0;
+      }
+      .page-404__title {
+        font-size: clamp(1.25rem, 3vw, 1.75rem);
+        font-weight: 600;
+        margin: 0;
+      }
+      .page-404__desc {
+        max-width: 30rem;
+        color: var(--color-gray);
+      }
+      [data-theme="dark"] .page-404__desc {
+        color: var(--color-light-gray);
+      }
+      .page-404__cta {
+        display: inline-flex;
+        gap: 0.5rem;
+        align-items: center;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid var(--color-accent);
+        border-radius: 999px;
+        font-weight: 600;
+        color: var(--text-color);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .page-404__cta:hover {
+        background: var(--color-accent);
+        color: var(--color-black);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page-404">
+      <p class="page-404__code">404</p>
+      <h1 class="page-404__title">Page not found</h1>
+      <p class="page-404__desc">
+        The page you were looking for doesn't exist. It may have been moved or
+        the URL might be mistyped.
+      </p>
+      <a class="page-404__cta" href="/About-Me.github.io/">
+        ← Back to home
+      </a>
+    </main>
+  </body>
+</html>

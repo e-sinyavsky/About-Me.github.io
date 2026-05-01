@@ -5,9 +5,16 @@ export const translations = {
         about: "About",
         skills: "Skills",
         experience: "Work Experience",
+        projects: "Projects",
         contacts: "Contacts",
         education: "Education",
       },
+    },
+    projects: {
+      title: "Featured <span class='text-accent'>Projects</span>",
+      subtitle: "A live snapshot of my recent public repositories on GitHub.",
+      cta: "View all on GitHub",
+      error: "Couldn't reach GitHub right now. Open my profile directly →",
     },
     hero: {
       title:
@@ -80,9 +87,17 @@ export const translations = {
         about: "Обо мне",
         skills: "Навыки",
         experience: "Опыт работы",
+        projects: "Проекты",
         contacts: "Контакты",
         education: "Образование",
       },
+    },
+    projects: {
+      title: "Избранные <span class='text-accent'>проекты</span>",
+      subtitle: "Свежий срез моих публичных репозиториев на GitHub.",
+      cta: "Все проекты на GitHub",
+      error:
+        "Не удалось получить данные с GitHub. Откройте мой профиль напрямую →",
     },
     hero: {
       title:
