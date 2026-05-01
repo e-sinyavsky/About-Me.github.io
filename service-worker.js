@@ -1,6 +1,6 @@
 // Cache-first service worker for the portfolio site.
 // Versioned cache name — bump on releases to invalidate.
-const CACHE_VERSION = "v6";
+const CACHE_VERSION = "v7";
 const CACHE_NAME = `about-me-${CACHE_VERSION}`;
 
 const PRECACHE = [
@@ -24,6 +24,8 @@ const PRECACHE = [
   "./scripts/contact-form.js?v=11",
   "./scripts/lib/typed.umd.js?v=11",
   "./scripts/back-to-top.js?v=11",
+  "./scripts/scroll-spy.js?v=11",
+  "./scripts/pwa.js?v=11",
   "./locales/translation.js?v=11",
   "./icons/tech-sprite.svg?v=11",
   "./images/me-400.webp?v=11",
