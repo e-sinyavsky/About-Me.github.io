@@ -105,7 +105,6 @@
         }
 
         &:disabled {
-          opacity: 0.7;
           cursor: not-allowed;
         }
 
@@ -114,13 +113,30 @@
         }
 
         .download-icon {
-          transition: all 0.3s ease;
-          display: flex;
+          transition: transform 0.3s var(--ease-out),
+            opacity 0.2s var(--ease-out);
+          display: inline-flex;
           align-items: center;
 
           svg {
             width: rem(20);
             height: rem(20);
+          }
+        }
+
+        &[data-state="loading"] {
+          .download-icon {
+            animation: hero-download-spin 0.9s linear infinite;
+          }
+        }
+
+        &[data-state="success"] {
+          background-color: #2ecc71 !important;
+          border-color: #2ecc71 !important;
+          color: white !important;
+
+          .download-icon {
+            transform: scale(1.1);
           }
         }
       }
@@ -202,6 +218,10 @@
       to {
         transform: translate(-50%, -50%) rotate(360deg);
       }
+    }
+
+    @keyframes hero-download-spin {
+      to { transform: rotate(360deg); }
     }
 
     .skills {
@@ -454,14 +474,81 @@
       }
 
       &__item {
+        position: relative;
         border: #{rem(2)} solid var(--color-black);
         border-radius: #{rem(50)};
         padding: rem(13);
         background-color: var(--color-accent);
-        transition: transform 0.2s;
+        transition: transform 0.2s var(--ease-spring),
+          box-shadow 0.2s var(--ease-out);
+        cursor: default;
 
-        &:hover {
-          transform: translateY(rem(-3));
+        @media (any-hover: hover) {
+          &:hover {
+            transform: translateY(rem(-4)) scale(1.05);
+            box-shadow: 0 rem(8) rem(20) rgba(0, 0, 0, 0.18);
+
+            .stack__image {
+              transform: rotate(-4deg);
+            }
+
+            &::before,
+            &::after {
+              opacity: 1;
+              transform: translate(-50%, rem(-2));
+            }
+          }
+        }
+
+        // Custom tooltip
+        &::before,
+        &::after {
+          position: absolute;
+          bottom: calc(100% + rem(6));
+          left: 50%;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.18s var(--ease-out) 0.05s,
+            transform 0.18s var(--ease-out) 0.05s;
+          transform: translate(-50%, rem(4));
+          z-index: 10;
+        }
+
+        &::before {
+          content: attr(data-tip);
+          padding: rem(5) rem(10);
+          background: var(--color-black);
+          color: var(--color-light);
+          font-size: rem(12);
+          font-weight: 500;
+          line-height: 1;
+          white-space: nowrap;
+          border-radius: rem(6);
+          box-shadow: 0 rem(4) rem(12) rgba(0, 0, 0, 0.2);
+
+          [data-theme="dark"] & {
+            background: var(--color-light);
+            color: var(--color-black);
+          }
+        }
+
+        &::after {
+          content: "";
+          width: rem(8);
+          height: rem(8);
+          background: var(--color-black);
+          transform: translate(-50%, rem(4)) rotate(45deg);
+          bottom: calc(100% + rem(2));
+
+          [data-theme="dark"] & {
+            background: var(--color-light);
+          }
+        }
+
+        @media (any-hover: hover) {
+          &:hover::after {
+            transform: translate(-50%, rem(-2)) rotate(45deg);
+          }
         }
 
         [data-theme="dark"] & {
@@ -473,7 +560,7 @@
         width: rem(36);
         height: rem(36);
         object-fit: contain;
-        transition: all 0.3s ease;
+        transition: transform 0.3s var(--ease-spring);
       }
     }
   }

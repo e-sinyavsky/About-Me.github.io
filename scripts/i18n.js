@@ -1,4 +1,4 @@
-import { translations } from "../locales/translation.js?v=7";
+import { translations } from "../locales/translation.js?v=8";
 
 const STORAGE_KEY = "language";
 const DEFAULT_LANG = "en";
@@ -16,6 +16,7 @@ const I18N_BINDINGS = [
   { selector: '[i18n="projects.subtitle"]', path: ["projects", "subtitle"] },
   { selector: '[i18n="projects.cta"]', path: ["projects", "cta"] },
   { selector: '[i18n="projects.error"]', path: ["projects", "error"] },
+  { selector: '[i18n="projects.retry"]', path: ["projects", "retry"] },
 
   { selector: '[i18n="hero.available"]', path: ["hero", "available"] },
   { selector: '[i18n="hero.button"]', path: ["hero", "button"] },

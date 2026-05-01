@@ -62,6 +62,15 @@
   &__menu {
     @include mobile {
       display: none;
+
+      &.open {
+        display: flex;
+
+        .header__menu-item {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     }
 
     &-list {
@@ -87,6 +96,21 @@
         text-align: center;
         justify-content: center;
         font-size: rem(38);
+      }
+    }
+
+    @include mobile {
+      .header__menu-item {
+        opacity: 0;
+        transform: translateY(rem(20));
+        transition: opacity 0.3s var(--ease-out),
+          transform 0.4s var(--ease-out);
+
+        @for $i from 1 through 7 {
+          &:nth-child(#{$i}) {
+            transition-delay: #{0.06s * $i};
+          }
+        }
       }
     }
   }

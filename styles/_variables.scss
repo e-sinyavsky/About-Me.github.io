@@ -14,6 +14,8 @@
   --container-width: #{rem(1100)};
   --container-padding-x: clamp(#{rem(16)}, 4vw, #{rem(40)});
   --transition-duration: 0.2s;
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
   --section-padding-y: clamp(#{rem(48)}, 10vw, #{rem(160)});
   --hero-title-size: clamp(#{rem(20)}, 4vw, #{rem(34)});

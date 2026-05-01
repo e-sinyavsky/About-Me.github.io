@@ -14,7 +14,8 @@ export const translations = {
       title: "Featured <span class='text-accent'>Projects</span>",
       subtitle: "A live snapshot of my recent public repositories on GitHub.",
       cta: "View all on GitHub",
-      error: "Couldn't reach GitHub right now. Open my profile directly →",
+      error: "Couldn't reach GitHub right now.",
+      retry: "Try again",
     },
     hero: {
       title:
@@ -86,6 +87,14 @@ export const translations = {
       email: "Email",
       message: "Message",
       submit: "Send message",
+      errors: {
+        name_required: "Please enter your name",
+        name_short: "Name should be at least 2 characters",
+        email_required: "Please enter your email",
+        email_invalid: "Please enter a valid email address",
+        message_required: "Please enter a message",
+        message_short: "Message should be at least 10 characters",
+      },
     },
   },
   ru: {
@@ -103,8 +112,8 @@ export const translations = {
       title: "Избранные <span class='text-accent'>проекты</span>",
       subtitle: "Свежий срез моих публичных репозиториев на GitHub.",
       cta: "Все проекты на GitHub",
-      error:
-        "Не удалось получить данные с GitHub. Откройте мой профиль напрямую →",
+      error: "Не удалось получить данные с GitHub.",
+      retry: "Повторить",
     },
     hero: {
       title:
@@ -177,6 +186,14 @@ export const translations = {
       email: "Email",
       message: "Сообщение",
       submit: "Отправить",
+      errors: {
+        name_required: "Пожалуйста, введите имя",
+        name_short: "Имя должно быть минимум 2 символа",
+        email_required: "Пожалуйста, введите email",
+        email_invalid: "Введите корректный email",
+        message_required: "Пожалуйста, введите сообщение",
+        message_short: "Сообщение должно быть минимум 10 символов",
+      },
     },
   },
 };

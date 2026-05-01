@@ -99,12 +99,25 @@
     if (errorEl) errorEl.hidden = true;
   }
 
-  async function fetchRepos() {
-    const cached = readCache();
-    if (cached) {
-      render(cached);
-      return;
+  function showSkeleton() {
+    grid.setAttribute("aria-busy", "true");
+    grid.innerHTML =
+      '<div class="projects__skeleton" aria-hidden="true"></div>' +
+      '<div class="projects__skeleton" aria-hidden="true"></div>' +
+      '<div class="projects__skeleton" aria-hidden="true"></div>';
+    if (errorEl) errorEl.hidden = true;
+  }
+
+  async function fetchRepos({ skipCache = false } = {}) {
+    if (!skipCache) {
+      const cached = readCache();
+      if (cached) {
+        render(cached);
+        return;
+      }
     }
+
+    showSkeleton();
 
     try {
       const res = await fetch(
@@ -127,6 +140,11 @@
       console.warn("GitHub repos fetch failed:", err);
       showError();
     }
+  }
+
+  const retryBtn = document.getElementById("projects-retry");
+  if (retryBtn) {
+    retryBtn.addEventListener("click", () => fetchRepos({ skipCache: true }));
   }
 
   if ("IntersectionObserver" in window) {
