@@ -1,4 +1,4 @@
-import { translations } from "../locales/translation.js?v=9";
+import { translations } from "../locales/translation.js?v=10";
 
 const STORAGE_KEY = "language";
 const DEFAULT_LANG = "en";
@@ -10,7 +10,14 @@ const I18N_BINDINGS = [
   { selector: '[i18n="header.nav.education"]', path: ["header", "nav", "education"] },
   { selector: '[i18n="header.nav.experience"]', path: ["header", "nav", "experience"] },
   { selector: '[i18n="header.nav.projects"]', path: ["header", "nav", "projects"] },
+  { selector: '[i18n="header.nav.news"]', path: ["header", "nav", "news"] },
   { selector: '[i18n="header.nav.contacts"]', path: ["header", "nav", "contacts"] },
+
+  { selector: '[i18n="news.title_lead"]', path: ["news", "title_lead"] },
+  { selector: '[i18n="news.title_accent"]', path: ["news", "title_accent"] },
+  { selector: '[i18n="news.subtitle"]', path: ["news", "subtitle"] },
+  { selector: '[i18n="news.empty"]', path: ["news", "empty"] },
+  { selector: '[i18n="news.error"]', path: ["news", "error"] },
 
   { selector: '[i18n="projects.title"]', path: ["projects", "title"], html: true },
   { selector: '[i18n="projects.subtitle"]', path: ["projects", "subtitle"] },

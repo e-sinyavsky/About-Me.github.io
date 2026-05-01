@@ -1,0 +1,38 @@
+[
+  {
+    "id": "portfolio-v2-shipped",
+    "date": "2026-04-30",
+    "read_minutes": 3,
+    "tags": ["portfolio", "frontend", "performance"],
+    "title": {
+      "en": "Portfolio v2.0 shipped — what changed",
+      "ru": "Портфолио v2.0: что изменилось"
+    },
+    "excerpt": {
+      "en": "Major redesign: live GitHub repos, hire-me CTA, contact form with inline validation, PWA, and 22 Playwright e2e tests.",
+      "ru": "Большой редизайн: живые репозитории с GitHub, hire-me CTA, контактная форма с inline-валидацией, PWA и 22 e2e-теста на Playwright."
+    },
+    "content": {
+      "en": "<p>The new build leans hard on the platform: a single CSS sprite for tech-stack icons (24 image requests collapsed to 1 cached file), <code>&lt;picture&gt;</code> with WebP for the hero (3.4&nbsp;MB → 33&nbsp;KB, ~99% reduction), and self-hosted Typed.js to drop the third-party CDN.</p><p>Accessibility got a real pass too: skip-link, <code>:focus-visible</code> rings, <code>aria-pressed</code>/<code>aria-expanded</code> on every toggle, full keyboard nav in the language dropdown, and reduced-motion fallbacks for every animation.</p><p>Most fun bit: the contact form now does inline validation with shake animation on error, success-state pop with green check, and a real spinner during submit. No more native browser tooltips.</p>",
+      "ru": "<p>Сборка опирается на платформу: один SVG-спрайт для иконок tech-стека (24 запроса схлопнулись в 1 кэшируемый файл), <code>&lt;picture&gt;</code> с WebP для hero (3.4&nbsp;МБ → 33&nbsp;КБ, ~99% экономии) и self-hosted Typed.js без сторонних CDN.</p><p>Доступность тоже подтянул: skip-link, <code>:focus-visible</code>, <code>aria-pressed</code>/<code>aria-expanded</code> на всех тогглах, полная клавиатурная навигация в языковом dropdown, и fallbacks для prefers-reduced-motion.</p><p>Самое весёлое — контактная форма с inline-валидацией: shake-анимация при ошибке, pop-чек при успехе, реальный спиннер во время сабмита. Никаких нативных браузерных тултипов.</p>"
+    }
+  },
+  {
+    "id": "welcome",
+    "date": "2026-04-15",
+    "read_minutes": 1,
+    "tags": ["intro"],
+    "title": {
+      "en": "Welcome to the dev journal",
+      "ru": "Привет — это дев-журнал"
+    },
+    "excerpt": {
+      "en": "Short notes on things I'm building or curious about. No fluff, no SEO theatrics.",
+      "ru": "Короткие заметки о том, что собираю или над чем думаю. Без воды, без SEO-ритуалов."
+    },
+    "content": {
+      "en": "<p>I built this section because most of what I learn while solving real problems never makes it back into a place I can find later. Hopefully other people stumble in too.</p><p>Topics will lean into: frontend craft, backend tradeoffs, performance, dev-experience tooling, occasional product-thinking. If something here helps you — write me, I'd love to hear about it.</p>",
+      "ru": "<p>Сделал этот раздел, потому что большая часть того, что узнаю при решении реальных задач, не попадает в место, где я смогу это потом найти. Если ещё кому-то пригодится — приятный бонус.</p><p>Темы: фронтенд, бэкенд-компромиссы, производительность, инструменты для DX, иногда продуктовое. Если что-то откликнется — напиши, мне приятно услышать.</p>"
+    }
+  }
+]

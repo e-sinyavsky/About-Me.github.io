@@ -118,6 +118,58 @@ test.describe("contact form", () => {
   });
 });
 
+test.describe("news page", () => {
+  test("loads, renders posts, expands on click", async ({ page }) => {
+    await page.goto("/news.html");
+    await expect(page).toHaveTitle(/Dev Journal/);
+
+    const cards = page.locator(".news-card:not(.news-card--skeleton)");
+    await expect(cards.first()).toBeVisible({ timeout: 5000 });
+
+    const firstCard = cards.first();
+    const toggle = firstCard.locator(".news-card__toggle");
+    await expect(toggle).toHaveAttribute("aria-expanded", "false");
+
+    await toggle.click();
+    await expect(firstCard).toHaveClass(/is-open/);
+    await expect(toggle).toHaveAttribute("aria-expanded", "true");
+  });
+
+  test("translates posts on language switch", async ({ page }) => {
+    await page.goto("/news.html");
+    await page.evaluate(() => localStorage.setItem("language", "en"));
+    await page.reload();
+
+    const firstTitle = page.locator(".news-card__title").first();
+    await expect(firstTitle).toBeVisible();
+    const enText = await firstTitle.textContent();
+
+    await page.locator(".language-selector__toggle").click();
+    await page.locator('.language-selector__option[data-lang="ru"]').click();
+    await page.waitForTimeout(150);
+
+    const ruText = await firstTitle.textContent();
+    expect(ruText).not.toBe(enText);
+    expect(ruText.length).toBeGreaterThan(0);
+  });
+
+  test("hash deep-link opens the matching post", async ({ page }) => {
+    await page.goto("/news.html#post-welcome");
+    await page.waitForSelector("#post-welcome");
+    await expect(page.locator("#post-welcome")).toHaveClass(/is-open/);
+  });
+
+  test("nav link from home page goes to news", async ({ page }) => {
+    await page.goto("/");
+    const burger = page.locator(".header__burger");
+    if (await burger.isVisible()) {
+      await burger.click();
+    }
+    await page.locator('a[href="news.html"]').first().click();
+    await expect(page).toHaveURL(/news\.html$/);
+  });
+});
+
 test.describe("metadata", () => {
   test("OG and Twitter card point to og-cover.jpg", async ({ page }) => {
     await page.goto("/");
