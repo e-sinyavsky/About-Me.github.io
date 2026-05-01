@@ -49,6 +49,27 @@ test.describe("scroll-spy", () => {
     const projectsLink = page.locator('.header__menu-link[href="#projects"]');
     await expect(projectsLink).toHaveClass(/is-current/);
   });
+
+  test("highlights Contacts when scrolled to the footer", async ({ page }) => {
+    await page.goto("/");
+    await page.waitForTimeout(300);
+
+    // Scroll to bottom (#contacts lives on the footer, not a .section)
+    await page.evaluate(() =>
+      window.scrollTo(0, document.body.scrollHeight)
+    );
+    await page.waitForTimeout(300);
+
+    const contactsLink = page.locator(
+      '.header__menu-link[href="#contacts"]'
+    );
+    await expect(contactsLink).toHaveClass(/is-current/);
+
+    const projectsLink = page.locator(
+      '.header__menu-link[href="#projects"]'
+    );
+    await expect(projectsLink).not.toHaveClass(/is-current/);
+  });
 });
 
 test.describe("theme toggle", () => {

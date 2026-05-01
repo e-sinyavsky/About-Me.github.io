@@ -1,39 +1,55 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = Array.from(
-    document.querySelectorAll(".section[id], section[id]")
-  ).filter((s) => document.querySelector(`.header__menu-link[href="#${s.id}"]`));
   const links = Array.from(
     document.querySelectorAll('.header__menu-link[href^="#"]')
   );
-  if (!sections.length || !links.length) return;
+  if (!links.length) return;
+
+  // Pair each #hash nav link with its target element (any element, not just .section).
+  const items = links
+    .map((link) => {
+      const id = link.getAttribute("href").slice(1);
+      const target = id && document.getElementById(id);
+      return target ? { link, target } : null;
+    })
+    .filter(Boolean);
+
+  if (!items.length) return;
+
+  // Sort by document order so "last passed" works regardless of nav menu order.
+  items.sort(
+    (a, b) =>
+      a.target.compareDocumentPosition(b.target) &
+      Node.DOCUMENT_POSITION_FOLLOWING
+        ? -1
+        : 1
+  );
 
   const header = document.querySelector(".header");
 
   function update() {
     const headerH = header ? header.offsetHeight : 0;
     const triggerY = headerH + 80;
-    let currentId = null;
+    let currentIdx = -1;
 
-    for (const section of sections) {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= triggerY) currentId = section.id;
+    for (let i = 0; i < items.length; i++) {
+      const rect = items[i].target.getBoundingClientRect();
+      if (rect.top <= triggerY) currentIdx = i;
     }
 
-    // If we're scrolled past the bottom of the page, keep the last section
+    // If we're at the very bottom of the page, force the last item active
     if (
-      !currentId &&
-      window.scrollY + window.innerHeight >= document.body.scrollHeight - 4
+      window.scrollY + window.innerHeight >=
+      document.body.scrollHeight - 4
     ) {
-      currentId = sections[sections.length - 1].id;
+      currentIdx = items.length - 1;
     }
 
-    for (const link of links) {
-      const href = link.getAttribute("href");
-      const isCurrent = href === `#${currentId}`;
-      link.classList.toggle("is-current", isCurrent);
-      if (isCurrent) link.setAttribute("aria-current", "true");
-      else link.removeAttribute("aria-current");
-    }
+    items.forEach((item, i) => {
+      const isCurrent = i === currentIdx;
+      item.link.classList.toggle("is-current", isCurrent);
+      if (isCurrent) item.link.setAttribute("aria-current", "true");
+      else item.link.removeAttribute("aria-current");
+    });
   }
 
   let ticking = false;
