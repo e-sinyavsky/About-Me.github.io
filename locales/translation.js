@@ -19,7 +19,8 @@ export const translations = {
     hero: {
       title:
         "<span class='text-accent'>Hello!</span> My name is Sinyavsky Egor.\nLet me show you my capabilities...\nI can do some great things for you.",
-      button: "Let's check!",
+      available: "Available for hire",
+      button: "Hire me",
       pdf_button: "Download CV",
     },
     skills: {
@@ -108,7 +109,8 @@ export const translations = {
     hero: {
       title:
         "<span class='text-accent'>Привет!</span> Меня зовут Синявский Егор.\nПозвольте показать вам мои возможности...\nЯ могу сделать для вас отличные вещи.",
-      button: "Связаться!",
+      available: "Открыт к предложениям",
+      button: "Нанять меня",
       pdf_button: "Скачать CV",
     },
     skills: {

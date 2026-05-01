@@ -1,30 +1,32 @@
 // Cache-first service worker for the portfolio site.
 // Versioned cache name — bump on releases to invalidate.
-const CACHE_VERSION = "v1";
+const CACHE_VERSION = "v2";
 const CACHE_NAME = `about-me-${CACHE_VERSION}`;
 
 const PRECACHE = [
   "./",
   "./index.html",
   "./404.html",
-  "./styles/main.css?v=6",
-  "./scripts/i18n.js?v=6",
-  "./scripts/projects.js?v=6",
-  "./scripts/scroll-animations.js?v=6",
-  "./scripts/theme-toggle.js?v=6",
-  "./scripts/burger-menu.js?v=6",
-  "./scripts/anchor-links.js?v=6",
-  "./scripts/header-scroll-effect.js?v=6",
-  "./scripts/type-text.js?v=6",
-  "./scripts/scroll-to-top.js?v=6",
-  "./scripts/download-pdf.js?v=6",
-  "./scripts/contact-form.js?v=6",
-  "./locales/translation.js?v=6",
-  "./images/me-400.webp?v=6",
-  "./images/me-800.webp?v=6",
-  "./images/me-400.jpg?v=6",
-  "./images/me-800.jpg?v=6",
-  "./icons/logo.svg?v=6",
+  "./styles/main.css?v=7",
+  "./scripts/i18n.js?v=7",
+  "./scripts/projects.js?v=7",
+  "./scripts/scroll-animations.js?v=7",
+  "./scripts/theme-toggle.js?v=7",
+  "./scripts/burger-menu.js?v=7",
+  "./scripts/anchor-links.js?v=7",
+  "./scripts/header-scroll-effect.js?v=7",
+  "./scripts/type-text.js?v=7",
+  "./scripts/scroll-to-top.js?v=7",
+  "./scripts/download-pdf.js?v=7",
+  "./scripts/contact-form.js?v=7",
+  "./scripts/lib/typed.umd.js?v=7",
+  "./locales/translation.js?v=7",
+  "./icons/tech-sprite.svg?v=7",
+  "./images/me-400.webp?v=7",
+  "./images/me-800.webp?v=7",
+  "./images/me-400.jpg?v=7",
+  "./images/me-800.jpg?v=7",
+  "./icons/logo.svg?v=7",
   "./manifest.webmanifest",
 ];
 

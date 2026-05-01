@@ -1,4 +1,4 @@
-import { translations } from "../locales/translation.js?v=6";
+import { translations } from "../locales/translation.js?v=7";
 
 const STORAGE_KEY = "language";
 const DEFAULT_LANG = "en";
@@ -17,6 +17,7 @@ const I18N_BINDINGS = [
   { selector: '[i18n="projects.cta"]', path: ["projects", "cta"] },
   { selector: '[i18n="projects.error"]', path: ["projects", "error"] },
 
+  { selector: '[i18n="hero.available"]', path: ["hero", "available"] },
   { selector: '[i18n="hero.button"]', path: ["hero", "button"] },
   { selector: '[i18n="hero.pdf_button"]', path: ["hero", "pdf_button"] },
 
@@ -135,29 +136,89 @@ function initialLanguage() {
 function init() {
   setLanguage(initialLanguage());
 
-  const toggle = document.querySelector(".language-selector__toggle");
+  const selector = document.querySelector(".language-selector");
+  if (!selector) return;
+
+  const toggle = selector.querySelector(".language-selector__toggle");
+  const options = Array.from(
+    selector.querySelectorAll(".language-selector__option")
+  );
+
+  const setExpanded = (open) => {
+    if (toggle) toggle.setAttribute("aria-expanded", String(open));
+    if (open && options.length) {
+      const active = options.find((o) => o.classList.contains("active")) || options[0];
+      active.focus();
+    }
+  };
+
   if (toggle) {
-    toggle.addEventListener("click", function (e) {
+    toggle.addEventListener("click", (e) => {
       e.stopPropagation();
-      const isExpanded = this.getAttribute("aria-expanded") === "true";
-      this.setAttribute("aria-expanded", String(!isExpanded));
+      const open = toggle.getAttribute("aria-expanded") !== "true";
+      setExpanded(open);
+    });
+
+    toggle.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        setExpanded(true);
+      }
     });
   }
 
-  document.querySelectorAll(".language-selector__option").forEach((option) => {
-    option.addEventListener("click", function () {
-      const lang = this.dataset.lang;
-      if (setLanguage(lang) && toggle) {
-        toggle.setAttribute("aria-expanded", "false");
+  options.forEach((option, idx) => {
+    option.addEventListener("click", () => {
+      if (setLanguage(option.dataset.lang)) {
+        setExpanded(false);
+        toggle?.focus();
+      }
+    });
+
+    option.addEventListener("keydown", (e) => {
+      switch (e.key) {
+        case "ArrowDown":
+          e.preventDefault();
+          options[(idx + 1) % options.length].focus();
+          break;
+        case "ArrowUp":
+          e.preventDefault();
+          options[(idx - 1 + options.length) % options.length].focus();
+          break;
+        case "Home":
+          e.preventDefault();
+          options[0].focus();
+          break;
+        case "End":
+          e.preventDefault();
+          options[options.length - 1].focus();
+          break;
+        case "Escape":
+          e.preventDefault();
+          setExpanded(false);
+          toggle?.focus();
+          break;
+        case "Enter":
+        case " ":
+          e.preventDefault();
+          option.click();
+          break;
       }
     });
   });
 
-  document.addEventListener("click", function (e) {
-    const selector = document.querySelector(".language-selector");
-    if (selector && !selector.contains(e.target)) {
-      const t = selector.querySelector(".language-selector__toggle");
-      if (t) t.setAttribute("aria-expanded", "false");
+  document.addEventListener("click", (e) => {
+    if (!selector.contains(e.target)) setExpanded(false);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (
+      e.key === "Escape" &&
+      toggle &&
+      toggle.getAttribute("aria-expanded") === "true"
+    ) {
+      setExpanded(false);
+      toggle.focus();
     }
   });
 }

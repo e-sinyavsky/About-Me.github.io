@@ -1,0 +1,60 @@
+@use "../helpers" as *;
+
+.hire-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(8);
+  padding: rem(6) rem(14);
+  border-radius: rem(50);
+  background: rgba(46, 204, 113, 0.12);
+  border: rem(1) solid rgba(46, 204, 113, 0.35);
+  color: #2ecc71;
+  font-size: rem(13);
+  font-weight: 600;
+  letter-spacing: rem(0.3);
+  text-decoration: none;
+  transition: background var(--transition-duration) ease,
+    border-color var(--transition-duration) ease,
+    transform var(--transition-duration) ease;
+  align-self: center;
+  cursor: pointer;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgba(46, 204, 113, 0.2);
+      border-color: rgba(46, 204, 113, 0.6);
+      transform: translateY(rem(-1));
+      color: #2ecc71;
+    }
+  }
+
+  &__dot {
+    width: rem(8);
+    height: rem(8);
+    border-radius: 50%;
+    background: #2ecc71;
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.6);
+    animation: hire-badge-pulse 1.8s ease-out infinite;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+  }
+
+  [data-theme="dark"] & {
+    background: rgba(46, 204, 113, 0.15);
+    border-color: rgba(46, 204, 113, 0.45);
+  }
+}
+
+@keyframes hire-badge-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 rem(10) rgba(46, 204, 113, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+  }
+}
