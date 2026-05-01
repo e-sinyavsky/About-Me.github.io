@@ -17,6 +17,15 @@ export const translations = {
       error: "Couldn't reach GitHub right now.",
       retry: "Try again",
     },
+    proficiency: {
+      expert: "Expert",
+      advanced: "Advanced",
+      proficient: "Proficient",
+      familiar: "Familiar",
+    },
+    github: {
+      heading: "GitHub activity",
+    },
     hero: {
       title:
         "<span class='text-accent'>Hello!</span> My name is Sinyavsky Egor.\nLet me show you my capabilities...\nI can do some great things for you.",
@@ -25,6 +34,7 @@ export const translations = {
       pdf_button: "Download CV",
     },
     skills: {
+      top_stack: "Top Stack",
       hard: "<span class='skills__title__main-accent'>HARD</span> skills",
       soft: "<span class='skills__title__main-accent'>SOFT</span> skills",
       frontend: "FRONTEND",
@@ -115,6 +125,15 @@ export const translations = {
       error: "Не удалось получить данные с GitHub.",
       retry: "Повторить",
     },
+    proficiency: {
+      expert: "Эксперт",
+      advanced: "Продвинутый",
+      proficient: "Уверенный",
+      familiar: "Знаком",
+    },
+    github: {
+      heading: "Активность на GitHub",
+    },
     hero: {
       title:
         "<span class='text-accent'>Привет!</span> Меня зовут Синявский Егор.\nПозвольте показать вам мои возможности...\nЯ могу сделать для вас отличные вещи.",
@@ -123,6 +142,7 @@ export const translations = {
       pdf_button: "Скачать CV",
     },
     skills: {
+      top_stack: "Основной стек",
       hard: "<span class='skills__title__main-accent'>ТЕХНИЧЕСКИЕ</span> навыки",
       soft: "<span class='skills__title__main-accent'>ГИБКИЕ</span> навыки",
       frontend: "ФРОНТЕНД",

@@ -1,0 +1,142 @@
+@use "../helpers" as *;
+
+.proficiency {
+  display: flex;
+  flex-direction: column;
+  gap: rem(14);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 rem(50) 0;
+
+  &__heading {
+    font-size: var(--section-title-size);
+    margin-bottom: rem(20);
+    font-weight: 700;
+    text-align: center;
+
+    &::before {
+      content: "▸ ";
+      color: var(--color-accent);
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: rem(36) 1fr auto;
+    grid-template-areas:
+      "icon name label"
+      "icon bar  bar";
+    align-items: center;
+    column-gap: rem(16);
+    row-gap: rem(6);
+    padding: rem(10) rem(14);
+    border-radius: rem(12);
+    background: rgba(127, 127, 127, 0.04);
+    border: rem(1) solid rgba(127, 127, 127, 0.1);
+    transition: background 0.2s var(--ease-out),
+      border-color 0.2s var(--ease-out),
+      transform 0.2s var(--ease-spring);
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: rgba(252, 200, 43, 0.06);
+        border-color: rgba(252, 200, 43, 0.4);
+        transform: translateX(rem(4));
+      }
+    }
+
+    [data-theme="dark"] & {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.06);
+    }
+
+    @include mobile {
+      grid-template-columns: rem(28) 1fr;
+      grid-template-areas:
+        "icon name"
+        "bar  bar"
+        "label label";
+      column-gap: rem(12);
+
+      .proficiency__label {
+        justify-self: flex-end;
+        margin-top: rem(-2);
+      }
+    }
+  }
+
+  &__icon {
+    grid-area: icon;
+    width: rem(32);
+    height: rem(32);
+
+    @include mobile {
+      width: rem(28);
+      height: rem(28);
+    }
+  }
+
+  &__name {
+    grid-area: name;
+    font-weight: 600;
+    font-size: rem(14);
+  }
+
+  &__label {
+    grid-area: label;
+    font-size: rem(11);
+    font-weight: 600;
+    letter-spacing: rem(0.5);
+    text-transform: uppercase;
+    padding: rem(3) rem(10);
+    border-radius: rem(50);
+    background: rgba(252, 200, 43, 0.18);
+    color: var(--color-accent);
+    white-space: nowrap;
+
+    [data-theme="dark"] & {
+      background: rgba(252, 200, 43, 0.22);
+    }
+  }
+
+  &__bar {
+    grid-area: bar;
+    position: relative;
+    height: rem(6);
+    background: rgba(127, 127, 127, 0.18);
+    border-radius: rem(50);
+    overflow: hidden;
+
+    [data-theme="dark"] & {
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+
+  &__fill {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      var(--color-accent),
+      #ffd966
+    );
+    box-shadow: 0 0 rem(8) rgba(252, 200, 43, 0.5);
+    transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &__fill {
+      width: calc(var(--level, 0) * 1%) !important;
+      transition: none;
+    }
+  }
+}
+
+// When the parent .section becomes visible (via scroll-animations.js),
+// fill each bar to its declared --level.
+.section.is-visible .proficiency__fill,
+.proficiency.is-visible .proficiency__fill {
+  width: calc(var(--level, 0) * 1%);
+}

@@ -1,4 +1,4 @@
-import { translations } from "../locales/translation.js?v=8";
+import { translations } from "../locales/translation.js?v=9";
 
 const STORAGE_KEY = "language";
 const DEFAULT_LANG = "en";
@@ -18,10 +18,18 @@ const I18N_BINDINGS = [
   { selector: '[i18n="projects.error"]', path: ["projects", "error"] },
   { selector: '[i18n="projects.retry"]', path: ["projects", "retry"] },
 
+  { selector: '[i18n="proficiency.expert"]', path: ["proficiency", "expert"] },
+  { selector: '[i18n="proficiency.advanced"]', path: ["proficiency", "advanced"] },
+  { selector: '[i18n="proficiency.proficient"]', path: ["proficiency", "proficient"] },
+  { selector: '[i18n="proficiency.familiar"]', path: ["proficiency", "familiar"] },
+
+  { selector: '[i18n="github.heading"]', path: ["github", "heading"] },
+
   { selector: '[i18n="hero.available"]', path: ["hero", "available"] },
   { selector: '[i18n="hero.button"]', path: ["hero", "button"] },
   { selector: '[i18n="hero.pdf_button"]', path: ["hero", "pdf_button"] },
 
+  { selector: '[i18n="skills.top_stack"]', path: ["skills", "top_stack"] },
   { selector: '[i18n="skills.frontend"]', path: ["skills", "frontend"] },
   { selector: '[i18n="skills.backend"]', path: ["skills", "backend"] },
   { selector: '[i18n="skills.hard"]', path: ["skills", "hard"], html: true },

@@ -56,8 +56,8 @@
       rel="canonical"
       href="https://e-sinyavsky.github.io/About-Me.github.io/"
     />
-    <link rel="icon" href="icons/logo.svg?v=8" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="images/me-400.jpg?v=8" />
+    <link rel="icon" href="icons/logo.svg?v=9" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="images/me-400.jpg?v=9" />
     <link rel="manifest" href="manifest.webmanifest" />
 
     <title>Egor Sinyavsky | Fullstack Developer</title>
@@ -77,12 +77,12 @@
     <link
       rel="preload"
       as="image"
-      href="images/me-800.webp?v=8"
-      imagesrcset="images/me-400.webp?v=8 400w, images/me-800.webp?v=8 800w"
+      href="images/me-800.webp?v=9"
+      imagesrcset="images/me-400.webp?v=9 400w, images/me-800.webp?v=9 800w"
       imagesizes="(max-width: 768px) 80vw, 400px"
       type="image/webp"
     />
-    <link rel="stylesheet" href="./styles/main.css?v=8" />
+    <link rel="stylesheet" href="./styles/main.css?v=9" />
 
     <script>
       // Prevent FOUC: apply theme before first paint.
@@ -413,21 +413,21 @@
                 <source
                   type="image/webp"
                   srcset="
-                    images/me-400.webp?v=8 400w,
-                    images/me-800.webp?v=8 800w
+                    images/me-400.webp?v=9 400w,
+                    images/me-800.webp?v=9 800w
                   "
                   sizes="(max-width: 768px) 80vw, 400px"
                 />
                 <source
                   type="image/jpeg"
                   srcset="
-                    images/me-400.jpg?v=8 400w,
-                    images/me-800.jpg?v=8 800w
+                    images/me-400.jpg?v=9 400w,
+                    images/me-800.jpg?v=9 800w
                   "
                   sizes="(max-width: 768px) 80vw, 400px"
                 />
                 <img
-                  src="images/me-800.jpg?v=8"
+                  src="images/me-800.jpg?v=9"
                   alt="Egor Sinyavsky - Fullstack Developer"
                   width="800"
                   height="1202"
@@ -441,6 +441,102 @@
 
         <section class="skills section" id="skills" aria-label="Skills">
           <div class="skills__inner container">
+            <h3 class="proficiency__heading" i18n="skills.top_stack">
+              Top Stack
+            </h3>
+            <ul class="proficiency" id="proficiency-list">
+              <li class="proficiency__item" style="--level: 95">
+                <svg class="proficiency__icon" aria-hidden="true">
+                  <use href="icons/tech-sprite.svg?v=9#icon-javascript" />
+                </svg>
+                <span class="proficiency__name">JavaScript / TypeScript</span>
+                <div class="proficiency__bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                  <span class="proficiency__fill"></span>
+                </div>
+                <span class="proficiency__label" i18n="proficiency.expert">Expert</span>
+              </li>
+              <li class="proficiency__item" style="--level: 92">
+                <svg class="proficiency__icon" aria-hidden="true">
+                  <use href="icons/tech-sprite.svg?v=9#icon-react" />
+                </svg>
+                <span class="proficiency__name">React + Redux</span>
+                <div class="proficiency__bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+                  <span class="proficiency__fill"></span>
+                </div>
+                <span class="proficiency__label" i18n="proficiency.expert">Expert</span>
+              </li>
+              <li class="proficiency__item" style="--level: 90">
+                <svg class="proficiency__icon" aria-hidden="true">
+                  <use href="icons/tech-sprite.svg?v=9#icon-html" />
+                </svg>
+                <span class="proficiency__name">HTML / CSS / SCSS</span>
+                <div class="proficiency__bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <span class="proficiency__fill"></span>
+                </div>
+                <span class="proficiency__label" i18n="proficiency.expert">Expert</span>
+              </li>
+              <li class="proficiency__item" style="--level: 85">
+                <svg class="proficiency__icon" aria-hidden="true">
+                  <use href="icons/tech-sprite.svg?v=9#icon-python" />
+                </svg>
+                <span class="proficiency__name">Python / Django</span>
+                <div class="proficiency__bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <span class="proficiency__fill"></span>
+                </div>
+                <span class="proficiency__label" i18n="proficiency.advanced">Advanced</span>
+              </li>
+              <li class="proficiency__item" style="--level: 78">
+                <svg class="proficiency__icon" aria-hidden="true">
+                  <use href="icons/tech-sprite.svg?v=9#icon-docker" />
+                </svg>
+                <span class="proficiency__name">Docker / Kubernetes</span>
+                <div class="proficiency__bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                  <span class="proficiency__fill"></span>
+                </div>
+                <span class="proficiency__label" i18n="proficiency.advanced">Advanced</span>
+              </li>
+              <li class="proficiency__item" style="--level: 72">
+                <svg class="proficiency__icon" aria-hidden="true">
+                  <use href="icons/tech-sprite.svg?v=9#icon-postgresql" />
+                </svg>
+                <span class="proficiency__name">PostgreSQL / MySQL</span>
+                <div class="proficiency__bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+                  <span class="proficiency__fill"></span>
+                </div>
+                <span class="proficiency__label" i18n="proficiency.proficient">Proficient</span>
+              </li>
+              <li class="proficiency__item" style="--level: 68">
+                <svg class="proficiency__icon" aria-hidden="true">
+                  <use href="icons/tech-sprite.svg?v=9#icon-flask" />
+                </svg>
+                <span class="proficiency__name">Flask</span>
+                <div class="proficiency__bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+                  <span class="proficiency__fill"></span>
+                </div>
+                <span class="proficiency__label" i18n="proficiency.proficient">Proficient</span>
+              </li>
+              <li class="proficiency__item" style="--level: 65">
+                <svg class="proficiency__icon" aria-hidden="true">
+                  <use href="icons/tech-sprite.svg?v=9#icon-rails" />
+                </svg>
+                <span class="proficiency__name">Ruby on Rails</span>
+                <div class="proficiency__bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                  <span class="proficiency__fill"></span>
+                </div>
+                <span class="proficiency__label" i18n="proficiency.proficient">Proficient</span>
+              </li>
+              <li class="proficiency__item" style="--level: 60">
+                <svg class="proficiency__icon" aria-hidden="true">
+                  <use href="icons/tech-sprite.svg?v=9#icon-angular" />
+                </svg>
+                <span class="proficiency__name">Angular</span>
+                <div class="proficiency__bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                  <span class="proficiency__fill"></span>
+                </div>
+                <span class="proficiency__label" i18n="proficiency.familiar">Familiar</span>
+              </li>
+            </ul>
+
             <h2 class="skills__title" i18n="skills.hard">
               <span class="skills__title__main-accent">HARD</span> skills
             </h2>
@@ -683,7 +779,7 @@
                       aria-label="Django"
                     >
                       <title>Django</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-django" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-django" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="React">
@@ -695,7 +791,7 @@
                       aria-label="React"
                     >
                       <title>React</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-react" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-react" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="TypeScript">
@@ -707,7 +803,7 @@
                       aria-label="TypeScript"
                     >
                       <title>TypeScript</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-typescript" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-typescript" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="Docker">
@@ -719,7 +815,7 @@
                       aria-label="Docker"
                     >
                       <title>Docker</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-docker" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-docker" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="Redux">
@@ -731,7 +827,7 @@
                       aria-label="Redux"
                     >
                       <title>Redux</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-redux" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-redux" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="HTML">
@@ -743,7 +839,7 @@
                       aria-label="HTML"
                     >
                       <title>HTML</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-html" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-html" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="CSS">
@@ -755,7 +851,7 @@
                       aria-label="CSS"
                     >
                       <title>CSS</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-css" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-css" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="Kubernetes">
@@ -767,7 +863,7 @@
                       aria-label="Kubernetes"
                     >
                       <title>Kubernetes</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-kubernetes" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-kubernetes" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="PostgreSQL">
@@ -779,7 +875,7 @@
                       aria-label="PostgreSQL"
                     >
                       <title>PostgreSQL</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-postgresql" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-postgresql" />
                     </svg>
                   </li>
                 </ul>
@@ -833,7 +929,7 @@
                       aria-label="Python"
                     >
                       <title>Python</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-python" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-python" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="Flask">
@@ -845,7 +941,7 @@
                       aria-label="Flask"
                     >
                       <title>Flask</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-flask" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-flask" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="TypeScript">
@@ -857,7 +953,7 @@
                       aria-label="TypeScript"
                     >
                       <title>TypeScript</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-typescript" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-typescript" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="Angular">
@@ -869,7 +965,7 @@
                       aria-label="Angular"
                     >
                       <title>Angular</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-angular" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-angular" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="HTML">
@@ -881,7 +977,7 @@
                       aria-label="HTML"
                     >
                       <title>HTML</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-html" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-html" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="CSS">
@@ -893,7 +989,7 @@
                       aria-label="CSS"
                     >
                       <title>CSS</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-css" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-css" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="Docker">
@@ -905,7 +1001,7 @@
                       aria-label="Docker"
                     >
                       <title>Docker</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-docker" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-docker" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="PostgreSQL">
@@ -917,7 +1013,7 @@
                       aria-label="PostgreSQL"
                     >
                       <title>PostgreSQL</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-postgresql" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-postgresql" />
                     </svg>
                   </li>
                 </ul>
@@ -972,7 +1068,7 @@
                       aria-label="Ruby"
                     >
                       <title>Ruby</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-ruby" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-ruby" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="Ruby on Rails">
@@ -984,7 +1080,7 @@
                       aria-label="Ruby on Rails"
                     >
                       <title>Ruby on Rails</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-rails" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-rails" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="JavaScript">
@@ -996,7 +1092,7 @@
                       aria-label="JavaScript"
                     >
                       <title>JavaScript</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-javascript" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-javascript" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="React">
@@ -1008,7 +1104,7 @@
                       aria-label="React"
                     >
                       <title>React</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-react" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-react" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="HTML">
@@ -1020,7 +1116,7 @@
                       aria-label="HTML"
                     >
                       <title>HTML</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-html" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-html" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="CSS">
@@ -1032,7 +1128,7 @@
                       aria-label="CSS"
                     >
                       <title>CSS</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-css" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-css" />
                     </svg>
                   </li>
                   <li class="stack__item" data-tip="Docker">
@@ -1044,7 +1140,7 @@
                       aria-label="Docker"
                     >
                       <title>Docker</title>
-                      <use href="icons/tech-sprite.svg?v=8#icon-docker" />
+                      <use href="icons/tech-sprite.svg?v=9#icon-docker" />
                     </svg>
                   </li>
                 </ul>
@@ -1095,6 +1191,68 @@
               >
                 Try again
               </button>
+            </div>
+
+            <h3 class="github-activity__heading" i18n="github.heading">
+              GitHub activity
+            </h3>
+            <div class="github-activity">
+              <a
+                class="github-activity__card github-activity__card--heatmap"
+                href="https://github.com/e-sinyavsky"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub contribution heatmap"
+              >
+                <img
+                  src="https://ghchart.rshah.org/fcc82b/e-sinyavsky"
+                  alt="GitHub contribution heatmap for e-sinyavsky"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.closest('.github-activity__card').classList.add('is-error')"
+                />
+                <span class="github-activity__fallback" aria-hidden="true">
+                  Heatmap unavailable
+                </span>
+              </a>
+
+              <a
+                class="github-activity__card github-activity__card--streak"
+                href="https://github.com/e-sinyavsky"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub contribution streak"
+              >
+                <img
+                  src="https://streak-stats.demolab.com?user=e-sinyavsky&hide_border=true&background=00000000&stroke=00000000&ring=fcc82b&fire=fcc82b&currStreakLabel=fcc82b&dates=888888&sideLabels=888888&currStreakNum=888888&sideNums=888888"
+                  alt="GitHub contribution streak"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.closest('.github-activity__card').classList.add('is-error')"
+                />
+                <span class="github-activity__fallback" aria-hidden="true">
+                  Streak unavailable
+                </span>
+              </a>
+
+              <a
+                class="github-activity__card github-activity__card--graph"
+                href="https://github.com/e-sinyavsky"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub contribution activity over time"
+              >
+                <img
+                  src="https://github-readme-activity-graph.vercel.app/graph?username=e-sinyavsky&bg_color=00000000&color=888888&line=fcc82b&point=fcc82b&hide_border=true&area=true&radius=8"
+                  alt="GitHub contribution activity graph"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.closest('.github-activity__card').classList.add('is-error')"
+                />
+                <span class="github-activity__fallback" aria-hidden="true">
+                  Activity graph unavailable
+                </span>
+              </a>
             </div>
 
             <div class="projects__cta">
@@ -1361,19 +1519,19 @@
       </svg>
     </button>
 
-    <script src="./scripts/lib/typed.umd.js?v=8" defer></script>
-    <script src="./scripts/anchor-links.js?v=8" defer></script>
-    <script src="./scripts/type-text.js?v=8" defer></script>
-    <script src="./scripts/header-scroll-effect.js?v=8" defer></script>
-    <script src="./scripts/burger-menu.js?v=8" defer></script>
-    <script type="module" src="./scripts/i18n.js?v=8"></script>
-    <script src="./scripts/theme-toggle.js?v=8" defer></script>
-    <script src="./scripts/scroll-to-top.js?v=8" defer></script>
-    <script src="./scripts/download-pdf.js?v=8" defer></script>
-    <script src="./scripts/projects.js?v=8" defer></script>
-    <script src="./scripts/scroll-animations.js?v=8" defer></script>
-    <script src="./scripts/back-to-top.js?v=8" defer></script>
-    <script type="module" src="./scripts/contact-form.js?v=8"></script>
-    <script src="./scripts/pwa.js?v=8" defer></script>
+    <script src="./scripts/lib/typed.umd.js?v=9" defer></script>
+    <script src="./scripts/anchor-links.js?v=9" defer></script>
+    <script src="./scripts/type-text.js?v=9" defer></script>
+    <script src="./scripts/header-scroll-effect.js?v=9" defer></script>
+    <script src="./scripts/burger-menu.js?v=9" defer></script>
+    <script type="module" src="./scripts/i18n.js?v=9"></script>
+    <script src="./scripts/theme-toggle.js?v=9" defer></script>
+    <script src="./scripts/scroll-to-top.js?v=9" defer></script>
+    <script src="./scripts/download-pdf.js?v=9" defer></script>
+    <script src="./scripts/projects.js?v=9" defer></script>
+    <script src="./scripts/scroll-animations.js?v=9" defer></script>
+    <script src="./scripts/back-to-top.js?v=9" defer></script>
+    <script type="module" src="./scripts/contact-form.js?v=9"></script>
+    <script src="./scripts/pwa.js?v=9" defer></script>
   </body>
 </html>

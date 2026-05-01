@@ -1,0 +1,109 @@
+@use "../helpers" as *;
+
+.github-activity {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "heatmap heatmap"
+    "streak  graph";
+  gap: rem(16);
+  margin-top: rem(24);
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "heatmap"
+      "streak"
+      "graph";
+  }
+
+  &__heading {
+    margin-top: rem(64);
+    margin-bottom: rem(8);
+    font-size: clamp(rem(20), 2.5vw, rem(26));
+    font-weight: 700;
+    text-align: center;
+
+    &::before {
+      content: "▸ ";
+      color: var(--color-accent);
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(16);
+    border-radius: rem(16);
+    background: rgba(127, 127, 127, 0.04);
+    border: rem(1) solid rgba(127, 127, 127, 0.12);
+    transition: transform 0.25s var(--ease-spring),
+      border-color 0.25s var(--ease-out),
+      box-shadow 0.25s var(--ease-out);
+    overflow: hidden;
+    min-height: rem(160);
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: translateY(rem(-3));
+        border-color: var(--color-accent);
+        box-shadow: 0 rem(10) rem(28) rgba(0, 0, 0, 0.08);
+      }
+    }
+
+    &--heatmap {
+      grid-area: heatmap;
+      padding: rem(20) rem(24);
+    }
+
+    &--streak {
+      grid-area: streak;
+    }
+
+    &--graph {
+      grid-area: graph;
+      min-height: rem(220);
+    }
+
+    [data-theme="dark"] & {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.06);
+
+      @media (any-hover: hover) {
+        &:hover {
+          box-shadow: 0 rem(10) rem(28) rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      transition: opacity 0.3s var(--ease-out);
+    }
+
+    &.is-error {
+      img {
+        display: none;
+      }
+
+      .github-activity__fallback {
+        display: block;
+      }
+    }
+  }
+
+  &__fallback {
+    display: none;
+    color: var(--color-gray);
+    font-size: rem(14);
+    text-align: center;
+
+    [data-theme="dark"] & {
+      color: var(--color-light-gray);
+    }
+  }
+}

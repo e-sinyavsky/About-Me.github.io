@@ -1,4 +1,4 @@
-import { translations } from "../locales/translation.js?v=8";
+import { translations } from "../locales/translation.js?v=9";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
