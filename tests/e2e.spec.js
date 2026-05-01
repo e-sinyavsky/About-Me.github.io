@@ -24,6 +24,33 @@ test.describe("portfolio basics", () => {
   });
 });
 
+test.describe("scroll-spy", () => {
+  test("highlights the section currently in view", async ({ page }) => {
+    await page.goto("/");
+    // Wait for scripts to wire up
+    await page.waitForTimeout(300);
+
+    // At top, About should be current
+    let aboutLink = page.locator(
+      '.header__menu-link[href="#about"]'
+    );
+    await expect(aboutLink).toHaveClass(/is-current/);
+
+    // Scroll into Skills
+    await page.locator("#skills").scrollIntoViewIfNeeded();
+    await page.waitForTimeout(250);
+    const skillsLink = page.locator('.header__menu-link[href="#skills"]');
+    await expect(skillsLink).toHaveClass(/is-current/);
+    await expect(aboutLink).not.toHaveClass(/is-current/);
+
+    // Scroll into Projects
+    await page.locator("#projects").scrollIntoViewIfNeeded();
+    await page.waitForTimeout(250);
+    const projectsLink = page.locator('.header__menu-link[href="#projects"]');
+    await expect(projectsLink).toHaveClass(/is-current/);
+  });
+});
+
 test.describe("theme toggle", () => {
   test("toggles between light and dark, persists across reloads", async ({
     page,

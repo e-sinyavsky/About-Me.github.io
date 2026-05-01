@@ -113,6 +113,47 @@
         }
       }
     }
+
+    &-link {
+      position: relative;
+      transition: color var(--transition-duration) var(--ease-out);
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: rem(-6);
+        width: 0;
+        height: rem(2);
+        background: var(--color-accent);
+        border-radius: rem(2);
+        transform: translateX(-50%);
+        transition: width 0.3s var(--ease-spring);
+        pointer-events: none;
+      }
+
+      &.is-current,
+      &--active,
+      &[aria-current="page"] {
+        color: var(--color-accent);
+
+        &::after {
+          width: 60%;
+        }
+      }
+
+      @media (any-hover: hover) {
+        &:hover::after {
+          width: 40%;
+        }
+      }
+
+      @include mobile {
+        &::after {
+          bottom: rem(-2);
+        }
+      }
+    }
   }
 
   &__burger {
