@@ -80,6 +80,12 @@ export const translations = {
         "Do you want to ask <span class='text-accent'><br />something interesting?</span>",
       subtitle: "Contact me. I am in touch Mon-Fri from 8 am to 8 pm (GMT).",
     },
+    contact: {
+      name: "Name",
+      email: "Email",
+      message: "Message",
+      submit: "Send message",
+    },
   },
   ru: {
     header: {
@@ -163,6 +169,12 @@ export const translations = {
         "Хотите спросить <span class='text-accent'><br />что-то интересное?</span>",
       subtitle:
         "Свяжитесь со мной. Я на связи с Пн по Пт с 8 утра до 8 вечера (GMT).",
+    },
+    contact: {
+      name: "Имя",
+      email: "Email",
+      message: "Сообщение",
+      submit: "Отправить",
     },
   },
 };

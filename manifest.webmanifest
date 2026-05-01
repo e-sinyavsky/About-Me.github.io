@@ -1,0 +1,26 @@
+{
+  "name": "Egor Sinyavsky — Fullstack Developer",
+  "short_name": "E. Sinyavsky",
+  "description": "Personal portfolio of Egor Sinyavsky — a Fullstack Developer working with Django, Flask, Ruby on Rails, React, TypeScript, Redux and Docker.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#fcc82b",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "icons/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "images/me-400.jpg",
+      "sizes": "400x600",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

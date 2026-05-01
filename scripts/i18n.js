@@ -1,4 +1,4 @@
-import { translations } from "../locales/translation.js?v=5";
+import { translations } from "../locales/translation.js?v=6";
 
 const STORAGE_KEY = "language";
 const DEFAULT_LANG = "en";
@@ -59,6 +59,11 @@ const I18N_BINDINGS = [
 
   { selector: '[i18n="footer.title"]', path: ["footer", "title"], html: true },
   { selector: '[i18n="footer.subtitle"]', path: ["footer", "subtitle"] },
+
+  { selector: '[i18n="contact.name"]', path: ["contact", "name"] },
+  { selector: '[i18n="contact.email"]', path: ["contact", "email"] },
+  { selector: '[i18n="contact.message"]', path: ["contact", "message"] },
+  { selector: '[i18n="contact.submit"]', path: ["contact", "submit"] },
 ];
 
 function resolvePath(obj, path) {
