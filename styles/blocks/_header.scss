@@ -118,6 +118,8 @@
       position: relative;
       transition: color var(--transition-duration) var(--ease-out);
 
+      // Underline appears only on hover or for the current page link (news.html aria-current).
+      // Removed scroll-spy "is-current" usage per request.
       &::after {
         content: "";
         position: absolute;
@@ -132,7 +134,6 @@
         pointer-events: none;
       }
 
-      &.is-current,
       &--active,
       &[aria-current="page"] {
         color: var(--color-accent);

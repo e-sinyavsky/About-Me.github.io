@@ -24,54 +24,6 @@ test.describe("portfolio basics", () => {
   });
 });
 
-test.describe("scroll-spy", () => {
-  test("highlights the section currently in view", async ({ page }) => {
-    await page.goto("/");
-    // Wait for scripts to wire up
-    await page.waitForTimeout(300);
-
-    // At top, About should be current
-    let aboutLink = page.locator(
-      '.header__menu-link[href="#about"]'
-    );
-    await expect(aboutLink).toHaveClass(/is-current/);
-
-    // Scroll into Skills
-    await page.locator("#skills").scrollIntoViewIfNeeded();
-    await page.waitForTimeout(250);
-    const skillsLink = page.locator('.header__menu-link[href="#skills"]');
-    await expect(skillsLink).toHaveClass(/is-current/);
-    await expect(aboutLink).not.toHaveClass(/is-current/);
-
-    // Scroll into Projects
-    await page.locator("#projects").scrollIntoViewIfNeeded();
-    await page.waitForTimeout(250);
-    const projectsLink = page.locator('.header__menu-link[href="#projects"]');
-    await expect(projectsLink).toHaveClass(/is-current/);
-  });
-
-  test("highlights Contacts when scrolled to the footer", async ({ page }) => {
-    await page.goto("/");
-    await page.waitForTimeout(300);
-
-    // Scroll to bottom (#contacts lives on the footer, not a .section)
-    await page.evaluate(() =>
-      window.scrollTo(0, document.body.scrollHeight)
-    );
-    await page.waitForTimeout(300);
-
-    const contactsLink = page.locator(
-      '.header__menu-link[href="#contacts"]'
-    );
-    await expect(contactsLink).toHaveClass(/is-current/);
-
-    const projectsLink = page.locator(
-      '.header__menu-link[href="#projects"]'
-    );
-    await expect(projectsLink).not.toHaveClass(/is-current/);
-  });
-});
-
 test.describe("theme toggle", () => {
   test("toggles between light and dark, persists across reloads", async ({
     page,
